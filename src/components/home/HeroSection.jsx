@@ -99,13 +99,13 @@ const CTEFHeroSection = () => {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#a6c251] to-[#9ab646] shadow-lg">
         <nav className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="w-full flex items-center justify-between h-20 lg:h-22">
+          <div className="w-full flex items-center justify-between h-20">
             {/* Logo Section */}
             <div className="flex items-center space-x-3 lg:space-x-4">
-              <div className="w-12 h-12 lg:w-16 lg:h-16 bg-white rounded-full flex items-center justify-center shadow-xl transform hover:scale-110 transition-transform duration-300">
-                
+              <div className="w-12 h-12 lg:w-14 lg:h-14 bg-white rounded-full flex items-center justify-center shadow-xl transform hover:scale-110 transition-transform duration-300">
+                <img src="/logo.png" alt="logo" className='rounded-full p-1' />
               </div>
-              <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white tracking-wider drop-shadow-lg">
+              <h1 className="text-xl sm:text-2xl lg:text-2xl font-bold text-white tracking-wider drop-shadow-lg">
                 CTEF ASSAM
               </h1>
             </div>
@@ -182,14 +182,14 @@ const CTEFHeroSection = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 sm:left-6 lg:left-10 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white/50 transition-all duration-300 hover:scale-110 z-10 group"
+            className="absolute left-4 sm:left-6 lg:left-10 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white/50 transition-all duration-300 hover:scale-110 z-10 group"
             aria-label="Previous slide"
           >
             <ChevronLeft className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white group-hover:scale-110 transition-transform" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-4 sm:right-6 lg:right-10 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white/50 transition-all duration-300 hover:scale-110 z-10 group"
+            className="absolute right-4 sm:right-6 lg:right-10 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white/50 transition-all duration-300 hover:scale-110 z-10 group"
             aria-label="Next slide"
           >
             <ChevronRight className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white group-hover:scale-110 transition-transform" />

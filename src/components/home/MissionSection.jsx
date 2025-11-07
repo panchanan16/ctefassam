@@ -2,13 +2,13 @@
 
 const MissionSection = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-12 px-4 sm:px-6 lg:px-8">
+    <section className="min-h-screen bg-[#f6f9ee] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
+          <h1 className="text-4xl sm:text-5xl font-light text-gray-900 leading-tight mb-4">
             An Untiring Mission For Promoting
-            <span className="block mt-2 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="block mt-2 bg-[#62791c] bg-clip-text text-transparent">
               Professional Development Of Teachers
             </span>
           </h1>
@@ -26,7 +26,7 @@ const MissionSection = () => {
               <img
                 src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80"
                 alt="Teacher presenting"
-                className="w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover transform group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-[400px] sm:h-[500px] object-cover transform group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
             </div>
