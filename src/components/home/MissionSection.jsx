@@ -59,7 +59,7 @@ const MissionSection = () => {
 
               {/* Read More Button */}
               <div className="mt-8">
-                <button className="group relative inline-flex items-center gap-2 px-8 py-4 bg-[#adcb53] text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-105">
+                <button className="group relative inline-flex items-center gap-2 px-8 py-3 bg-[#adcb53] text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-105">
                   <span className="relative z-10">Read More</span>
                   <svg 
                     className="relative z-10 w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
