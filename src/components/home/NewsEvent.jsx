@@ -82,7 +82,7 @@ const EventsNews = () => {
   ];
 
   return (
-    <div className="min-h-screen p-4 md:p-8" style={{ backgroundColor: '#31694E' }}>
+    <div className="min-h-screen p-4 md:p-8 bg-gradient-to-br from-[#0a3d2e] to-[#1a5c47]" >
       <style jsx>{`
         /* Custom Scrollbar Styling */
         .custom-scrollbar::-webkit-scrollbar {
@@ -168,7 +168,7 @@ const EventsNews = () => {
                       </svg>
                       {event.date}
                     </p>
-                    <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                    <p className="text-gray-600 text-sm md:text-lg leading-relaxed">
                       {event.description}
                     </p>
                   </div>
@@ -201,7 +201,7 @@ const EventsNews = () => {
                     <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3 capitalize">
                       {news.title}
                     </h3>
-                    <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
+                    <p className="text-gray-600 text-sm md:text-lg leading-relaxed mb-4">
                       {news.description}
                     </p>
                     <button className="inline-flex items-center gap-2 bg-gradient-to-r from-gray-900 to-gray-800 text-white px-5 py-2.5 rounded-full hover:from-gray-800 hover:to-gray-700 transition-all duration-300 group shadow-md hover:shadow-lg">
