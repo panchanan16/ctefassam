@@ -19,18 +19,21 @@ function Header() {
 
           {/* Desktop Navigation */}
           <ul className="hidden lg:flex items-center space-x-5">
-            {["Home", "About us", "Photo Gallery", "E-Conference"].map(
-              (item) => (
-                <li key={item}>
-                  <Link
-                    href={`${item.toLowerCase().replace(" ", "_")}`}
-                    className="text-white text-lg font-medium hover:bg-white/20 px-4 py-2 rounded-lg transition-all duration-300 hover:-translate-y-0.5"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              )
-            )}
+            {[
+              { name: "Home", url: "" },
+              { name: "About us", url: "about_us" },
+              { name: "Photo Gallery", url: "gallery" },
+              { name: "E-Conference", url: "conference" },
+            ].map((item) => (
+              <li key={item.name}>
+                <Link
+                  href={`/${item.url}`}
+                  className="text-white text-lg font-medium hover:bg-white/20 px-4 py-2 rounded-lg transition-all duration-300 hover:-translate-y-0.5"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
 
           {/* Action Buttons */}
