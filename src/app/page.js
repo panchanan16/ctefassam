@@ -4,7 +4,7 @@ import Gallery from "@/components/home/Gallery";
 import CTEFHeroSection from "@/components/home/HeroSection";
 import MissionSection from "@/components/home/MissionSection";
 import EventsNews from "@/components/home/NewsEvent";
-import TeamMembers from "@/components/home/OurMembers";
+import ExecutiveMembers from "@/components/home/ExecutiveMembers";
 
 export default function Home() {
   return (
@@ -13,7 +13,8 @@ export default function Home() {
       <AboutUsSection />
       <StatsSection />
       <MissionSection />
-      <TeamMembers />
+      <ExecutiveMembers />
+      <ExecutiveMembers type="Dist" />
       <EventsNews />
       <Gallery />
     </div>

@@ -12,15 +12,7 @@ const AboutUsSection = () => {
                 About Us
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Founded in 1985 by Dr. Gulab Chaurasia, the Council for Teacher
-                Education Foundation (CTEF) is a global professional
-                organization dedicated to advancing teacher excellence and
-                professionalism. Lorem ipsum dolor sit, amet consectetur
-                adipisicing elit. Dolore voluptatum animi veniam tempora!
-                Recusandae pariatur, veritatis exercitationem minima ratione
-                neque voluptatibus ex officia repellat repudiandae eaque!
-                Cupiditate similique, quae rem tenetur quia tempore perspiciatis
-                ipsum explicabo adipisci. Sint, reiciendis labore?
+                The Council for Teacher Education (CTEF) is a leading Professional Organization in India with an International status received in 2009. The Founder President of CTEF late Dr. Gulab Chaurasia who was an eminent Educationist, a Global Teacher Educator and above all a Humanitarian established this Organization in 1985 at Bhopal with likeminded handful of Teachers and Teacher Educators. Their initiatives and hard work bloomed CTEF into a matured Professional Organization with affiliated chapters in twenty-five National and three overseas countries. Having large network of Teachers, Educationists, Academicians, Teacher Educators ,Educational Administrators, Educational Policy makers and Researchers as Life Members, The prime objective of CTEF is building competency, developing teaching skills and molding Professionalism mind set of teachers through multiple Teacher training programs and activities. CTEF’s all National and Overseas chapters undertake Teachers development programs throughout the year.
               </p>
             </div>
 
@@ -28,7 +20,7 @@ const AboutUsSection = () => {
             <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition duration-300">
               <div className="mb-6 overflow-hidden rounded-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop"
+                  src="/home/Dr-Gulab-Chaurasia.jpg"
                   alt="Dr. Gulab Chaurasia"
                   className="w-full h-72 object-cover"
                 />
