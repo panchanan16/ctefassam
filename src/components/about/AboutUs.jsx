@@ -22,7 +22,7 @@ const AboutUsSection = () => {
                 <img
                   src="/home/Dr-Gulab-Chaurasia.jpg"
                   alt="Dr. Gulab Chaurasia"
-                  className="w-full h-72 object-cover"
+                  className="w-full h-82 object-cover"
                 />
               </div>
               <div className="text-center">

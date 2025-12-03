@@ -1,10 +1,52 @@
+"use client"
+
 import { Menu } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function Header() {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isPastHero, setIsPastHero] = useState(false);
+
+  useEffect(() => {
+    const controlHeader = () => {
+      const currentScrollY = window.scrollY;
+      const heroHeight = window.innerHeight; // Hero section is full viewport height
+
+      // Check if scrolled past hero section
+      if (currentScrollY > heroHeight * 0.8) {
+        setIsPastHero(true);
+      } else {
+        setIsPastHero(false);
+      }
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down and past 100px
+        setIsVisible(false);
+      } else {
+        // Scrolling up
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", controlHeader);
+
+    return () => {
+      window.removeEventListener("scroll", controlHeader);
+    };
+  }, [lastScrollY]);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#a6c251] to-[#9ab646] shadow-lg">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 shadow-lg transition-all duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      } ${
+        isPastHero ? "bg-blue-900" : "bg-transparent backdrop-blur-md"
+      }`}
+    >
       <nav className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="w-full flex items-center justify-between h-20">
           {/* Logo Section */}

@@ -8,7 +8,7 @@ const EventsNews = () => {
   const upcomingEvents = [
     {
       id: 1,
-      title: "women's conclave 2025",
+      title: "Women's conclave 2025, Nalbari",
       date: "Nov 22, 2025",
       venue: "Phanidhar Dutta Seminar Hall, Guwahati, Assam",
       description:
@@ -19,17 +19,11 @@ const EventsNews = () => {
   const pastEvents = [
     {
       id: 1,
-      title: "annual conference 2024",
-      date: "Oct 15, 2024",
+      title: "Women's conclave 2025",
+      date: "Nov 22, 2025",
+      venue: "Phanidhar Dutta Seminar, Guwahati, Assam",
       description:
-        "nbhdvbvgvvdv mbda kjblqj lnjbfvvhbvvs .vb jhgvsoidf bsvbku poknldvb kjhsd fh jhjhvahg hvidedf dssdfddf dfdfadfadsadsgadgadaegg",
-    },
-    {
-      id: 2,
-      title: "tech summit 2024",
-      date: "Sep 20, 2024",
-      description:
-        "nbhdvbvgvvdv mbda kjblqj lnjbfvvhbvvs .vb jhgvsoidf bsvbku poknldvb kjhsd fh jhjhvahg hvidedf dssdfddf dfdfadfadsadsgadgadaegg",
+        "The Women's Conclave, themed 'Viksit Bharat 2047, Strengthening Nari Shakti,' is a platform to celebrate women's achievements and empower their leadership in nation-building across education, governance, entrepreneurship, STEM, agriculture, and social development.",
     },
   ];
 
@@ -38,9 +32,8 @@ const EventsNews = () => {
       id: 1,
       title: "women's conclave 2025",
       description:
-        "The Women's Conclave, themed 'Viksit Bharat 2047, Strengthening Nari Shakti,' is a platform to celebrate women's achievements and empower their leadership in nation-building across education, governance, entrepreneurship, STEM, agriculture, and social development."
-    }
-  
+        "The Women's Conclave, themed 'Viksit Bharat 2047, Strengthening Nari Shakti,' is a platform to celebrate women's achievements and empower their leadership in nation-building across education, governance, entrepreneurship, STEM, agriculture, and social development.",
+    },
   ];
 
   return (

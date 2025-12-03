@@ -98,7 +98,7 @@ const CTEFHeroSection = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section with Slider */}
-      <section className="relative h-screen mt-20 overflow-hidden">
+      <section className="relative h-screen overflow-hidden">
         <div 
           className="relative w-full h-full"
           onTouchStart={handleTouchStart}

@@ -1,164 +1,31 @@
 "use client";
 
 import React, { useState } from "react";
+import members from "@/data.json";
 
-
-const ExecutiveMembers = ({ type = "exec" }) => {
-  const executiveMember = [
-    {
-      id: 1,
-      name: "Prof. Nilima Bhagabati",
-      designation: "Chairman",
-      email: "nilimabhagabati@gmail.com",
-      contact: "9864066459",
-      address:
-        "Flat No. 5A, Bhagirathi Apartment, Rong Mili Path (5th Bye-lane), Zoo Narengi Road, Guwahati-781021",
-      image: "/executive/nilima.jpg",
-    },
-    {
-      id: 2,
-      name: "Dr. Archana Bhattacharjee",
-      designation: "Vice-Chairman",
-      email: "archanabhattacharjee183@gmail.com",
-      contact: "7002729378",
-      address: '"Niramoyee", Shanti-Path, PO-Borbheta, Jorhat-785001, Assam',
-      image: "/executive/archana.jpg",
-    },
-    {
-      id: 3,
-      name: "Dr. Satyabrata Baruah",
-      designation: "Treasurer",
-      email: "satyabratabaruah92@gmail.com",
-      contact: "9864776008",
-      address:
-        "Department of Education, B. Borooah College (Autonomous), Ulubari, Guwahati-781007",
-      image: "/executive/Satyabrata.png",
-    },
-    {
-      id: 4,
-      name: "Jonali Mudoi",
-      designation: "Joint Treasurer",
-      email: "mudoijonali@gmail.com, jonalimudoi2016@gmail.com",
-      contact: "9954165144",
-      address: "Asso. Prof. Education, Nagoan Girls College, Nagoan",
-      image: "",
-    },
-    {
-      id: 5,
-      name: "Dr. Gitanjalee Bhuyan",
-      designation: "Secretary",
-      email: "gitanjaleebhuyan@gmail.com",
-      contact: "9864937666",
-      address:
-        "Associate Professor, Dept. of Education, Bapujee College, PO Sarthebari, Dist: Barpeta -781307",
-      image: "/executive/geetanjali.jpg",
-    },
-  ];
-
-  const districtMembers = [
-    {
-      id: 1,
-      name: "Dr. Gitanjalee Bhuyan",
-      address: "Barpeta",
-      contact: "9864937666",
-      email: "gitanjaleebhuyan@gmail.com",
-      image: "/executive/geetanjali.jpg",
-    },
-    {
-      id: 2,
-      name: "Dr. Ataur Rahman",
-      address: "Dhemaji",
-      contact: "7002366242",
-      email: "ataurdhemaji99@gmail.com",
-      image: "/executive/ataur.png",
-    },
-    {
-      id: 3,
-      name: "Dr. Biman Arandhara",
-      address: "Golaghat",
-      contact: "9401803553",
-      email: "bimanarandhara@gmail.com",
-      image: "",
-    },
-    {
-      id: 4,
-      name: "Dr. Archana Bhattacharjee",
-      address: "Jorhat",
-      contact: "7002729378",
-      email: "tara_siddhi_hung@yahoo.co.in",
-      image: "/executive/archana.jpg",
-    },
-    {
-      id: 5,
-      name: "Pinku Moni Tamuly",
-      address: "Jorhat",
-      contact: "8638525761",
-      email: "pinkumoni24442@gmail.com",
-      image: "/executive/pinkimoni.jpg",
-    },
-    {
-      id: 6,
-      name: "Ms. Sangeeta Sarmah",
-      address: "Kamrup (M)",
-      contact: "9864195142",
-      email: "sangeetasarma05@gmail.com",
-      image: "/executive/sangeeta.jpg",
-    },
-    {
-      id: 7,
-      name: "Dr. Utpal Nath",
-      address: "Morigaon",
-      contact: "",
-      email: "",
-      image: "",
-    },
-    {
-      id: 8,
-      name: "Dr. Sabita Devi",
-      address: "Nagaon",
-      contact: "9401025325",
-      email: "sabitamam@yahoo.co.in",
-      image: "/executive/sabita.jpg",
-    },
-    {
-      id: 9,
-      name: "Dr. Tribeni Saikia",
-      address: "Nagaon",
-      contact: "9101276508",
-      email: "saikia.tribeni76@gmail.com",
-      image: "/executive/tribeni.jpg",
-    },
-  ];
-
-  const allMembers = type === "exec" ? executiveMember : districtMembers;
-
-  const [visibleCount, setVisibleCount] = useState(4);
+const OurAllMembers = () => {
+  const [visibleCount, setVisibleCount] = useState(10);
   const [isExpanded, setIsExpanded] = useState(false);
-
-  const dummyImage = 
-    "https://raymetrics.com/wp-content/uploads/2016/08/dummy-prod-1.jpg";
 
   const handleViewMore = () => {
     if (isExpanded) {
-      setVisibleCount(4);
+      setVisibleCount(10);
       setIsExpanded(false);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
-      setVisibleCount(allMembers.length);
+      setVisibleCount(visibleCount + 10);
       setIsExpanded(true);
     }
   };
 
-  const visibleMembers = allMembers.slice(0, visibleCount);
+  const visibleMembers = members.slice(0, visibleCount);
 
   return (
     <div className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-light tracking-wide text-gray-900 mb-4">
-            {type === "exec"
-              ? "Executive Committee of CTEF-Assam"
-              : "CTEF Assam District Committee Coordinator"}
+            Our Expert Members
           </h1>
           <div className="w-24 h-1 bg-teal-600 mx-auto"></div>
         </div>
@@ -166,26 +33,60 @@ const ExecutiveMembers = ({ type = "exec" }) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12">
           {visibleMembers.map((member) => (
             <div
-              key={member.id}
+              key={member.lmno}
               className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform bg-white"
             >
-              <div className="aspect-[4/4] overflow-hidden bg-gray-100">
+              {/* <div className="aspect-[4/4] overflow-hidden bg-gray-100">
                 <img
                   src={member.image || dummyImage}
                   alt={member.name}
                   className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
                 />
-              </div>
+              </div> */}
 
               <div className="p-6">
                 <h3 className="text-xl sm:text-2xl font-light text-gray-900 mb-2">
                   {member.name}
                 </h3>
 
-                <p className="text-sm font-medium text-teal-600 mb-3">
-                  {member.designation}
-                </p>
+                <div className="flex items-start gap-2">
+                  <svg
+                    className="w-4 h-4 text-gray-500 mt-0.5 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 5h16v12a2 2 0 01-2 2H6a2 2 0 01-2-2V5z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 9h6"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 13h10"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 17h10"
+                    />
+                  </svg>
+
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                    {member.lmno}
+                  </p>
+                </div>
 
                 <div className="space-y-2 mb-3">
                   <div className="flex items-start gap-2">
@@ -263,16 +164,14 @@ const ExecutiveMembers = ({ type = "exec" }) => {
           ))}
         </div>
 
-        {allMembers.length > 4 && (
+        {members.length > 4 && (
           <div className="flex justify-center">
             {!isExpanded ? (
               <button
                 onClick={handleViewMore}
                 className="group relative inline-flex items-center gap-2 px-8 py-3 bg-[#adcb53] text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-105"
               >
-                <span className="relative z-10">
-                  View More
-                </span>
+                <span className="relative z-10">View More</span>
                 <svg
                   className={`relative z-10 w-5 h-5 transform transition-transform duration-300 ${
                     isExpanded
@@ -304,4 +203,4 @@ const ExecutiveMembers = ({ type = "exec" }) => {
   );
 };
 
-export default ExecutiveMembers;
+export default OurAllMembers;

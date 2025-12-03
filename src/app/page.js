@@ -5,6 +5,7 @@ import CTEFHeroSection from "@/components/home/HeroSection";
 import MissionSection from "@/components/home/MissionSection";
 import EventsNews from "@/components/home/NewsEvent";
 import ExecutiveMembers from "@/components/home/ExecutiveMembers";
+import OurAllMembers from "@/components/home/ListOfMembers";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <MissionSection />
       <ExecutiveMembers />
       <ExecutiveMembers type="Dist" />
+      <OurAllMembers />
       <EventsNews />
       <Gallery />
     </div>
