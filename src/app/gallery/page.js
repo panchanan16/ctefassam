@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import { X, ChevronLeft, ChevronRight, Calendar, Loader } from 'lucide-react';
+import Header from '@/components/common/Header';
+import Link from 'next/link';
 
 const Gallery = () => {
   // Color theme
@@ -184,26 +186,22 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+      <Header />
       {/* Header Section */}
-      <section className="py-16 md:py-24 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
-        <div className="text-center max-w-3xl mx-auto space-y-6">
-          <h1 
-            className="text-4xl md:text-5xl"
-          >
-            Our Gallery
-          </h1>
-          <div 
-            className="w-20 h-1 mx-auto"
-            style={{ backgroundColor: colors.accent }}
-          ></div>
-          <p className="text-lg text-gray-700 leading-relaxed">
+      <header className="bg-emerald-950 py-16 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-500/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/4"></div>
+
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4"> Our Gallery</h1>
+          <p className="text-emerald-200 text-sm md:text-base max-w-2xl mx-auto">
             Explore our collection of memorable moments and achievements. Each image tells a story of dedication, collaboration, and success. Click on any image to view it in full size and navigate through our gallery.
           </p>
         </div>
-      </section>
+      </header>
 
       {/* Gallery Grid */}
-      <section className="pb-16 md:pb-24 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
+      <section className="pb-16 mt-10 md:pb-24 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {galleryImages.slice(0, visibleImages).map((image, index) => (
             <div
@@ -220,20 +218,20 @@ const Gallery = () => {
                   alt={image.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
-                <div 
+                <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
-                  style={{ 
-                    background: `linear-gradient(to top, ${colors.primary}ee, ${colors.primary}00)` 
+                  style={{
+                    background: `linear-gradient(to top, ${colors.primary}ee, ${colors.primary}00)`
                   }}
                 >
                   <div className="p-4 text-white w-full">
                     <h3 className="font-bold text-lg mb-1">{image.title}</h3>
                     <div className="flex items-center gap-2 text-sm">
                       <Calendar size={14} />
-                      <span>{new Date(image.date).toLocaleDateString('en-US', { 
-                        year: 'numeric', 
-                        month: 'long', 
-                        day: 'numeric' 
+                      <span>{new Date(image.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
                       })}</span>
                     </div>
                   </div>
@@ -249,32 +247,27 @@ const Gallery = () => {
             <button
               onClick={handleLoadMore}
               disabled={isLoading}
-              className="px-8 py-4 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 mx-auto"
-              style={{ 
-                backgroundColor: colors.primary,
-              }}
-              onMouseEnter={(e) => !isLoading && (e.target.style.backgroundColor = colors.secondary)}
-              onMouseLeave={(e) => !isLoading && (e.target.style.backgroundColor = colors.primary)}
+              className="text-emerald-900 font-bold border-b border-emerald-900 hover:text-amber-500 hover:border-amber-500 transition"              
             >
               {isLoading ? (
-                <>
-                  <Loader className="animate-spin" size={20} />
-                  <span>Loading...</span>
-                </>
+                <div className="flex items-center gap-2 justify-center">
+                  <Loader className="animate-spin inline-block" size={20} />
+                  <span className='inline-block'>Loading...</span>
+                </div>
               ) : (
-                <span>View More Images</span>
+                <span>View More</span>
               )}
             </button>
             <p className="text-gray-600 mt-4 text-sm">
               Showing {visibleImages} of {galleryImages.length} images
             </p>
           </div>
-        )}
+        )}       
       </section>
 
       {/* Lightbox Modal */}
       {selectedImage && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 animate-fadeIn"
           onClick={closeLightbox}
         >
@@ -315,7 +308,7 @@ const Gallery = () => {
           </button>
 
           {/* Image Container */}
-          <div 
+          <div
             className="relative max-w-7xl max-h-[90vh] mx-4 animate-scaleIn"
             onClick={(e) => e.stopPropagation()}
           >
@@ -324,19 +317,19 @@ const Gallery = () => {
               alt={selectedImage.title}
               className="max-w-full max-h-[calc(90vh-120px)] w-auto h-auto object-contain rounded-lg shadow-2xl"
             />
-            
+
             {/* Image Info */}
-            <div 
+            <div
               className="mt-4 p-4 rounded-lg text-white"
               style={{ backgroundColor: colors.primary }}
             >
               <h2 className="text-2xl font-bold mb-2">{selectedImage.title}</h2>
               <div className="flex items-center gap-2 text-sm">
                 <Calendar size={16} />
-                <span>{new Date(selectedImage.date).toLocaleDateString('en-US', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
+                <span>{new Date(selectedImage.date).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
                 })}</span>
               </div>
               <p className="text-sm mt-2 opacity-90">

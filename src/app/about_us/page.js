@@ -1,276 +1,206 @@
-"use client"
-
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Mail, MapPin, Phone, Loader } from 'lucide-react';
-import TeamMembers from '@/components/common/TeamMembers';
+"use client";
+import Footer from '@/components/common/Footer';
+import Header from '@/components/common/Header';
+import {
+  Target, Eye, Heart, Users, CheckCircle2,
+  ArrowRight, Sparkles,
+} from 'lucide-react';
 
 const AboutUs = () => {
-  // Color theme
-  const colors = {
-    primary: '#31694E',
-    secondary: '#658C58',
-    accent: '#BBC863'
-  };
-
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [visibleMembers, setVisibleMembers] = useState(10);
-  const [isLoading, setIsLoading] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-
-  // Scroll animation effect
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Core values data
-  const coreValues = [
-    {
-      title: 'Innovation',
-      description: 'Pushing boundaries and embracing new ideas',
-      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop'
-    },
-    {
-      title: 'Integrity',
-      description: 'Building trust through transparency and honesty',
-      image: 'https://images.unsplash.com/photo-1560264280-88b68371db39?w=400&h=300&fit=crop'
-    },
-    {
-      title: 'Excellence',
-      description: 'Delivering quality in everything we do',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop'
-    },
-    {
-      title: 'Collaboration',
-      description: 'Working together to achieve common goals',
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop'
-    },
-    {
-      title: 'Sustainability',
-      description: 'Creating lasting positive impact',
-      image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400&h=300&fit=crop'
-    }
-  ];
-
-  const handleNextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % coreValues.length);
-  };
-
-  const handlePrevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + coreValues.length) % coreValues.length);
-  };
-
-  const handleLoadMore = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setVisibleMembers((prev) => Math.min(prev + 10, allMembers.length));
-      setIsLoading(false);
-    }, 800);
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      {/* About Us Section */}
-      <section className="py-16 md:py-24 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div 
-            className="space-y-6 animate-fade-in"
-            style={{
-              opacity: Math.min(1, 1 - scrollY / 500),
-              transform: `translateY(${scrollY * 0.1}px)`
-            }}
-          >
-            <h1 className="text-4xl md:text-5xl">
-              About Us
-            </h1>
-            <div className="w-20 h-1 bg-[#BBC863]"></div>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              We are a passionate team dedicated to transforming ideas into reality. With over a decade of experience in the industry, we've built a reputation for excellence, innovation, and unwavering commitment to our clients' success.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Our journey began with a simple vision: to create meaningful solutions that make a difference. Today, we continue to push boundaries, embrace challenges, and deliver exceptional results that exceed expectations.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Every project we undertake is an opportunity to innovate, collaborate, and create lasting impact. We believe in the power of teamwork, creativity, and dedication to achieve extraordinary outcomes.
-            </p>
-          </div>
-          <div className="relative group">
-            <div className="absolute -inset-4 bg-gradient-to-r from-[#BBC863] to-[#658C58] rounded-lg opacity-20 group-hover:opacity-30 blur-xl transition-all duration-500"></div>
-            <img
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
-              alt="Our Team"
-              className="relative rounded-lg shadow-2xl w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-        </div>
-      </section>
+    <div className="font-sans text-slate-800 bg-white overflow-x-hidden">
+      <Header />
+      {/* ================= PAGE HEADER ================= */}
+      {/* Consistent with the site theme - clear title with breadcrumb feel */}
+      <header className="bg-emerald-950 py-16 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-500/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/4"></div>
 
-      {/* Mission Section */}
-      <section className="py-16 md:py-24 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto bg-[#31694E]/5 rounded-3xl">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="order-2 md:order-1 relative group">
-            <div className="absolute -inset-4 bg-gradient-to-r from-[#658C58] to-[#31694E] rounded-lg opacity-20 group-hover:opacity-30 blur-xl transition-all duration-500"></div>
-            <img
-              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop"
-              alt="Our Mission"
-              className="relative rounded-lg shadow-2xl w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-          <div className="order-1 md:order-2 space-y-6">
-            <h2 className="text-4xl md:text-5xl">
-              Our Mission
-            </h2>
-            <div className="w-20 h-1 bg-[#658C58]"></div>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              To empower businesses and individuals through innovative solutions that drive growth, foster creativity, and create sustainable value for our communities and stakeholders.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              We are committed to maintaining the highest standards of quality and integrity in everything we do, ensuring that our work not only meets but exceeds the expectations of those we serve.
-            </p>            
-          </div>
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">About Us</h1>
+          <p className="text-emerald-200 text-sm md:text-base max-w-2xl mx-auto">
+            Get to know the people and the purpose behind the Council for Teacher Education Foundation, Assam Chapter.
+          </p>
         </div>
-      </section>
+      </header>
 
-      {/* Vision Section */}
-      <section className="py-16 md:py-24 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl">
-              Our Vision
-            </h2>
-            <div className="w-20 h-1 bg-[#BBC863]"></div>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              To be the global leader in innovative solutions, recognized for our commitment to excellence, sustainability, and positive impact on society. We envision a future where technology and human creativity come together to solve the world's most pressing challenges.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Our vision extends beyond business success. We aspire to create a legacy of meaningful change, inspiring future generations to think boldly, act responsibly, and contribute to a better world for all.
-            </p>            
-          </div>
-          <div className="relative group">
-            <div className="absolute -inset-4 bg-gradient-to-r from-[#BBC863] to-[#658C58] rounded-lg opacity-20 group-hover:opacity-30 blur-xl transition-all duration-500"></div>
-            <img
-              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop"
-              alt="Our Vision"
-              className="relative rounded-lg shadow-2xl w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-        </div>
-      </section>
+      {/* ================= SECTION 1: ABOUT PARAGRAPH + PHOTO ================= */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
-      {/* Core Values Section */}
-      <section className="py-16 md:py-24 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto bg-gradient-to-br from-[#31694E]/5 to-[#658C58]/5 rounded-3xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl mb-4">
-            Our Core Values
-          </h2>
-          <div className="w-20 h-1 bg-[#BBC863] mx-auto"></div>
-        </div>
-
-        {/* Slider for mobile and tablet */}
-        <div className="lg:hidden relative">
-          <div className="overflow-hidden">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-              {coreValues.map((value, index) => (
-                <div key={index} className="w-full flex-shrink-0 px-4">
-                  <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-                    <img
-                      src={value.image}
-                      alt={value.title}
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="p-6">
-                      <h3 className="text-2xl font-bold text-[#31694E] mb-3">
-                        {value.title}
-                      </h3>
-                      <p className="text-gray-600">{value.description}</p>
-                    </div>
-                  </div>
+            {/* Image Side - utilizing the 'dashed border' motif from home page */}
+            <div className="lg:w-1/2 relative order-2 lg:order-1">
+              <div className="relative p-5 border-2 border-dashed border-emerald-200 rounded-2xl">
+                <div className="absolute top-0 left-0 w-full h-full bg-emerald-50 rounded-2xl -rotate-2 -z-10"></div>
+                <img
+                  src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="CTEF Team Meeting"
+                  className="w-full h-auto rounded-xl shadow-lg object-cover aspect-[4/3]"
+                />
+                {/* Floating Badge */}
+                <div className="absolute -bottom-6 -right-6 bg-amber-500 text-white p-6 rounded-xl shadow-xl hidden md:block">
+                  <p className="text-3xl font-bold">20+</p>
+                  <p className="text-xs uppercase tracking-wider font-medium">Years of Service</p>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-          
-          {/* Navigation buttons */}
-          <button
-            onClick={handlePrevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-[#BBC863] text-[#31694E] hover:text-white p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110"
-            aria-label="Previous slide"
-          >
-            <ChevronLeft size={24} />
-          </button>
-          <button
-            onClick={handleNextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-[#BBC863] text-[#31694E] hover:text-white p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110"
-            aria-label="Next slide"
-          >
-            <ChevronRight size={24} />
-          </button>
 
-          {/* Dots indicator */}
-          <div className="flex justify-center gap-2 mt-6">
-            {coreValues.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  currentSlide === index ? 'bg-[#31694E] w-8' : 'bg-gray-300'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
+            {/* Text Side */}
+            <div className="lg:w-1/2 order-1 lg:order-2">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-amber-500 font-bold uppercase tracking-widest text-xs">Who We Are</span>
+                <div className="h-px w-12 bg-amber-500"></div>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-emerald-950 mb-6 leading-tight">
+                Dedicated to <span className="text-amber-500 relative inline-block">
+                  Excellence
+                  {/* Brush stroke SVG under text */}
+                  <svg className="absolute w-full h-3 -bottom-1 left-0 text-amber-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+                    <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
+                  </svg>
+                </span> in Teacher Education
+              </h2>
+              <p className="text-gray-600 mb-6 leading-relaxed text-lg">
+                The Council for Teacher Education Foundation (CTEF) Assam Chapter is a premier professional organization committed to the qualitative improvement of teacher education. We act as a bridge between policy makers, teacher educators, and the teaching community.
+              </p>
+              <p className="text-gray-600 mb-8 leading-relaxed">
+                Since our inception, we have been working tirelessly to organize seminars, workshops, and training programs that empower educators with modern pedagogical skills and digital literacy, ensuring they are prepared for the classrooms of tomorrow.
+              </p>
+              <button className="flex items-center gap-2 text-emerald-900 font-bold border-b-2 border-amber-500 pb-1 hover:text-amber-600 transition">
+                Read Our History <ArrowRight size={18} />
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ================= SECTION 2 & 3: MISSION & VISION ================= */}
+      <section className="py-20 bg-emerald-900 text-white relative overflow-hidden">
+        {/* Background Patterns */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+          <div className="absolute right-0 top-0 w-96 h-96 bg-white rounded-full blur-[100px]"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-16">
+
+            {/* Mission */}
+            <div className="bg-emerald-800/50 border border-emerald-700 p-8 md:p-10 rounded-2xl hover:bg-emerald-800 transition duration-300">
+              <div className="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-amber-500/20">
+                <Target size={32} className="text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+              <p className="text-emerald-100 leading-relaxed text-lg">
+                To facilitate and promote quality teacher education through active collaboration, research, and professional development programs. We aim to create an ecosystem where educators are empowered to transform society through knowledge.
+              </p>
+            </div>
+
+            {/* Vision */}
+            <div className="bg-emerald-800/50 border border-emerald-700 p-8 md:p-10 rounded-2xl hover:bg-emerald-800 transition duration-300">
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg">
+                <Eye size={32} className="text-emerald-900" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
+              <p className="text-emerald-100 leading-relaxed text-lg">
+                To be a global leader in shaping educational policies and practices that foster innovation, inclusivity, and excellence in teaching, ensuring every learner has access to a world-class educator.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ================= SECTION 4: CORE VALUES ================= */}
+      <section className="py-24 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <span className="text-amber-500 font-bold tracking-widest text-sm uppercase">Our Culture</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-emerald-950 mt-2">Core Values</h2>
+            <div className="w-20 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: 'Integrity', icon: CheckCircle2, desc: 'We uphold the highest standards of honesty and strong moral principles in all our actions.' },
+              { title: 'Innovation', icon: Sparkles, desc: 'We constantly seek new ways to improve teaching methodologies and embrace technology.' },
+              { title: 'Collaboration', icon: Users, desc: 'We believe in the power of working together with institutions and communities.' },
+              { title: 'Inclusivity', icon: Heart, desc: 'We strive to create an educational environment that respects and welcomes diversity.' }
+            ].map((value, idx) => (
+              <div key={idx} className="bg-white p-8 rounded-xl shadow-sm border-b-4 border-transparent hover:border-amber-500 hover:shadow-xl transition duration-300 group">
+                <div className="mb-6 inline-block p-3 bg-emerald-50 rounded-lg group-hover:bg-emerald-900 transition duration-300">
+                  <value.icon size={28} className="text-emerald-600 group-hover:text-amber-400 transition duration-300" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-3">{value.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{value.desc}</p>
+              </div>
             ))}
           </div>
         </div>
+      </section>
 
-        {/* Grid for desktop */}
-        <div className="hidden lg:grid lg:grid-cols-3 xl:grid-cols-5 gap-6">
-          {coreValues.map((value, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-              style={{
-                animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
-              }}
-            >
-              <img
-                src={value.image}
-                alt={value.title}
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-5">
-                <h3 className="text-xl font-bold text-[#31694E] mb-2">
-                  {value.title}
-                </h3>
-                <p className="text-sm text-gray-600">{value.description}</p>
+      {/* ================= SECTION 5: OUR MEMBERS ================= */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+
+          {/* Header specific to the 'Executive Committee' style requested */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-amber-500 relative inline-block">
+              Our Members
+              <Sparkles className="absolute -top-4 -right-8 text-amber-400 w-6 h-6 animate-pulse" />
+            </h2>
+            <p className="text-gray-500 mt-4 max-w-xl mx-auto">
+              Meet the dedicated professionals leading the charge for better education in Assam.
+            </p>
+          </div>
+
+          {/* Using the Specific 'Green Vertical Bar' Card Style Requested previously */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              { name: "Dr. B. K. Das", role: "Chairman", desc: "Former Dean, State Engineering College" },
+              { name: "Prof. S. Hazarika", role: "Secretary", desc: "HOD Computer Science, Tech University" },
+              { name: "Dr. Nilima Bhagabati", role: "Advisor", desc: "Senior Educationist" },
+              { name: "Dr. A. K. Sharma", role: "Treasurer", desc: "Professor, Guwahati University" },
+              { name: "Mrs. R. Devi", role: "Executive Member", desc: "Principal, City College" },
+              { name: "Mr. P. Gogoi", role: "Coordinator", desc: "District Education Officer" },
+              { name: "Dr. S. Barua", role: "Member", desc: "Lecturer, DIET" },
+              { name: "Prof. M. Ahmed", role: "Member", desc: "Research Scholar" },
+              { name: "Dr. J. Kalita", role: "Member", desc: "Asst. Professor" }
+            ].map((member, index) => (
+              <div
+                key={index}
+                className="bg-slate-50 rounded-xl p-6 shadow-sm hover:shadow-md transition duration-300 flex items-stretch gap-4 border border-gray-100 group"
+              >
+                {/* Green Vertical Bar */}
+                <div className="w-1.5 bg-emerald-600 rounded-full shrink-0 group-hover:bg-amber-500 transition-colors"></div>
+
+                {/* Content */}
+                <div className="flex flex-col justify-center">
+                  <h3 className="text-gray-900 font-bold text-lg leading-tight group-hover:text-emerald-900 transition">
+                    {member.name}
+                  </h3>
+                  <p className="text-emerald-600 font-medium text-xs uppercase mt-1 tracking-wide">
+                    {member.role}
+                  </p>
+                  <p className="text-gray-400 text-xs mt-2">
+                    {member.desc}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <button className="px-8 py-3 rounded-full border border-emerald-900 text-emerald-900 font-bold hover:bg-emerald-900 hover:text-white transition duration-300">
+              View Full Member Directory
+            </button>
+          </div>
         </div>
       </section>
 
-      {/* Our Members Section */}
-      <TeamMembers />
-     
+      <Footer />
 
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-fade-in {
-          animation: fadeInUp 1s ease-out;
-        }
-      `}</style>
     </div>
   );
 };
