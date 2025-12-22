@@ -1,16 +1,9 @@
-"use client"
-
-import React, { useState } from 'react';
 import {
-  Phone, Mail, Facebook, Twitter, Linkedin, Instagram,
-  Menu, X, MapPin, CheckCircle2, User, Calendar,
-  CreditCard, Upload, Send, ArrowRight,
-  Sparkles
+  Phone, Mail, Facebook, Twitter, Linkedin, Instagram, CheckCircle2
 } from 'lucide-react';
 import ExecutiveCommittee from '@/components/home/ExecutiveMembers';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
-import Gallery from './gallery/page';
 import GalleryHome from '@/components/home/Gallery';
 import JoinForm from '@/components/JoinForm/JoinForm';
 
