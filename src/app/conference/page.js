@@ -169,11 +169,11 @@ const EConference = () => {
                     )}
                   </div>
 
-                  <div className="mt-auto">
+                  {/* <div className="mt-auto">
                      <button className="w-full bg-emerald-900 text-white font-bold py-3 rounded-lg hover:bg-amber-500 transition shadow-md">
                        Register Now
                      </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
@@ -226,9 +226,9 @@ const EConference = () => {
                      </div>
                   </div>
 
-                  <button className="mt-4 w-full text-xs font-bold text-emerald-900 bg-emerald-50 py-2 rounded border border-transparent group-hover:border-emerald-200 hover:bg-white transition">
+                  {/* <button className="mt-4 w-full text-xs font-bold text-emerald-900 bg-emerald-50 py-2 rounded border border-transparent group-hover:border-emerald-200 hover:bg-white transition">
                      Watch Recording
-                  </button>
+                  </button> */}
                </div>
              ))}
           </div>

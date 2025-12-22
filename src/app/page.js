@@ -73,7 +73,7 @@ const CTEFAssam = () => {
         </div>
 
         {/* Stats Strip - Floating */}
-        <div className="container mx-auto w-[50vw] px-4 relative mt-12 lg:-mt-8 mr-0 z-20">
+        <div className="container mx-auto w-screen lg:w-[50vw] px-4 relative mt-12 lg:-mt-8 mr-0 z-20">
           <div className="bg-white rounded-2xl shadow-xl border border-amber-500 p-6 grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center border-r-3 border-amber-500 last:border-0">
               <h3 className="text-3xl font-bold text-emerald-900">500+</h3>
