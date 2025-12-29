@@ -1,11 +1,13 @@
 import {
   Phone, Mail, Facebook, Twitter, Linkedin, Instagram, CheckCircle2
 } from 'lucide-react';
-import ExecutiveCommittee from '@/components/home/ExecutiveMembers';
+import ExecutiveCommittee from '@/components/ExecutiveCommitee/ExecutiveMembers';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 import GalleryHome from '@/components/home/Gallery';
 import JoinForm from '@/components/JoinForm/JoinForm';
+import HomeSlider from '@/components/HomeSlider/HomeSlider';
+import ExecutiveCommitee from '@/components/ExecutiveCommitee/ExecutiveCommitee';
 
 const CTEFAssam = () => {
   return (
@@ -44,10 +46,10 @@ const CTEFAssam = () => {
             <h1 className="text-4xl lg:text-6xl font-extrabold text-emerald-950 mb-4 leading-tight">
               Shaping The <br />
               Future Teaching <br />
-              <span className="text-amber-500">Of Assam</span>
+              <span className="text-amber-500">in Assam</span>
             </h1>
             <p className="text-gray-600 mb-8 max-w-lg leading-relaxed">
-              CTEF Assam Chapter is dedicated to improving the standard of Teacher Education through specific collaboration, best practices, and development.
+              The CTEF Assam Chapter is committed to enhancing the quality of teacher education through strategic collaborations, adoption of best practices, and continuous professional development.
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="bg-emerald-900 text-white px-8 py-3 rounded font-semibold hover:bg-emerald-800 transition shadow-lg">
@@ -60,16 +62,7 @@ const CTEFAssam = () => {
           </div>
 
           {/* Right Image */}
-          <div className="relative">
-            {/* Yellow decoration behind image */}
-            <div className="absolute -top-6 -right-6 w-full h-full bg-amber-400 rounded-tr-[50px] rounded-bl-[50px] -z-10"></div>
-
-            <img
-              src="/home/hero.png"
-              alt="Teacher in Assam"
-              className="w-full h-[400px] object-cover rounded-tr-[50px] rounded-bl-[50px] shadow-2xl border-4 border-white"
-            />
-          </div>
+          <HomeSlider />
         </div>
 
         {/* Stats Strip - Floating */}
@@ -245,44 +238,7 @@ const CTEFAssam = () => {
       <JoinForm />
 
       {/* ================= EXECUTIVE COMMITTEE ================= */}
-      <section className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-emerald-950 inline-block border-b-4 border-amber-400 pb-2">
-              Executive <span className="text-amber-500">Committee</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {[1, 2, 3, 4].map((item) => (
-              <div key={item} className="bg-white rounded-xl shadow-lg overflow-hidden group">
-                <div className="h-64 overflow-hidden relative">
-                  <div className="absolute inset-0 bg-emerald-900/0 group-hover:bg-emerald-900/20 transition z-10"></div>
-                  <img
-                    src={`https://images.unsplash.com/photo-${item === 1 ? '1560250097-0b93528c311a' : item === 2 ? '1472099645785-5658abf4ff4e' : '1519085360753-af0119f7cbe7'}?auto=format&fit=crop&w=600&q=80`}
-                    alt="Member"
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                  />
-                </div>
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-emerald-900">Prof. Shefali Tumung</h3>
-                  <p className="text-amber-500 font-bold text-xs uppercase mb-4">{item === 1 ? 'Chairperson' : item === 2 ? 'Secretary' : 'Treasurer'}</p>
-                  <div className="flex justify-center space-x-2 text-gray-400 text-xs">
-                    <div className="flex items-center gap-1"><Mail size={12} /> email@example.com</div>
-                  </div>
-                  <hr className="my-4 border-gray-100" />
-                  <div className="text-xs text-gray-500 px-4">
-                    Department of Education, Gauhati University, Assam
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <button className="text-emerald-900 font-bold border-b border-emerald-900 hover:text-amber-500 hover:border-amber-500 transition">View All Members</button>
-          </div>
-        </div>
-      </section>
+      <ExecutiveCommitee />
 
       <ExecutiveCommittee />
       <Footer />

@@ -1,5 +1,6 @@
 import Footer from '@/components/common/Footer';
 import Header from '@/components/common/Header';
+import ReadMore from '@/components/readmore/ReadMore';
 import {
   Target, Eye, Heart, Users, CheckCircle2,
   ArrowRight, Sparkles,
@@ -60,15 +61,14 @@ const AboutUs = () => {
                   </svg>
                 </span> in Teacher Education
               </h2>
-              <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                The Council for Teacher Education Foundation (CTEF) Assam Chapter is a premier professional organization committed to the qualitative improvement of teacher education. We act as a bridge between policy makers, teacher educators, and the teaching community.
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                The Council for Teacher Education Foundation (CTEF) is a leading professional organization in India, accorded international status in 2009. Established in 1985 at Bhopal by the late Dr. Gulab Chaurasia—an eminent educationist, global teacher educator, and humanitarian—CTEF began with a small group of like-minded teachers and teacher educators. Through sustained efforts and visionary initiatives, the organization has evolved into a mature professional body with affiliated chapters in twenty-five states across India and three overseas countries.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Since our inception, we have been working tirelessly to organize seminars, workshops, and training programs that empower educators with modern pedagogical skills and digital literacy, ensuring they are prepared for the classrooms of tomorrow.
+                CTEF has a vast network of life members comprising teachers, educationists, academicians, teacher educators, educational administrators, policymakers, and researchers. The primary objective of the Foundation is to build professional competencies, enhance teaching skills, and foster a culture of professionalism among teachers through diverse training programmes, academic activities, and capacity-building initiatives. Its national and international chapters conduct teacher development programmes throughout the year.
               </p>
-              <button className="flex items-center gap-2 text-emerald-900 font-bold border-b-2 border-amber-500 pb-1 hover:text-amber-600 transition">
-                Read Our History <ArrowRight size={18} />
-              </button>
+              <ReadMore />
+
             </div>
 
           </div>
@@ -91,9 +91,35 @@ const AboutUs = () => {
                 <Target size={32} className="text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-              <p className="text-emerald-100 leading-relaxed text-lg">
-                To facilitate and promote quality teacher education through active collaboration, research, and professional development programs. We aim to create an ecosystem where educators are empowered to transform society through knowledge.
+              <p className="text-emerald-100 leading-relaxed text-lg mb-4">
+                To facilitate and promote quality teacher education through active collaboration, research, and professional development programs.
               </p>
+              <ul className="text-emerald-100 space-y-2 text-lg">
+                <li className="flex items-start">
+                  <span className="mr-2 text-amber-500">•</span>
+                  <p><span className='font-bold'>Enhance Teacher Competency</span> – Strengthen skills and professionalism through continuous capacity-building programmes.</p>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-amber-500">•</span>
+                  <p><span className='font-bold'>Promote Innovative Pedagogy</span> – Encourage learner-centric, experiential, and multidisciplinary teaching approaches.</p>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-amber-500">•</span>
+                  <p><span className='font-bold'>Leverage Technology</span> – Integrate digital literacy, e-learning, and technology-enabled teaching methods.</p>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-amber-500">•</span>
+                  <p><span className='font-bold'>Foster Research & Leadership</span> – Support reflective teaching, critical thinking, and ethical educational leadership.</p>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-amber-500">•</span>
+                  <p><span className='font-bold'>Champion Inclusivity & Equity</span> – Ensure gender equity and inclusive practices to address diverse learner needs.</p>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-amber-500">•</span>
+                  <p><span className='font-bold'>Contribute to Nation-Building </span> – Empower teachers as agents of change for a Viksit Bharat @2047.</p>
+                </li>
+              </ul>
             </div>
 
             {/* Vision */}
@@ -102,9 +128,40 @@ const AboutUs = () => {
                 <Eye size={32} className="text-emerald-900" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-              <p className="text-emerald-100 leading-relaxed text-lg">
-                To be a global leader in shaping educational policies and practices that foster innovation, inclusivity, and excellence in teaching, ensuring every learner has access to a world-class educator.
+              <p className="text-emerald-100 leading-relaxed text-lg mb-4">
+                To be a global leader in shaping educational policies and practices that foster innovation, inclusivity, and excellence.
               </p>
+              <ul className="text-emerald-100 space-y-2 text-lg">
+                <li className="flex items-start">
+                  <span className="mr-2 text-white">•</span>
+                  <p><span className='font-bold'>Excellence in Education </span>- Empower teachers to achieve professional and pedagogical excellence.</p>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-white">•</span>
+                  <p><span className='font-bold'>Innovation in Teaching </span>– Foster innovative, learner-centric, and experiential teaching approaches.</p>
+                </li>
+
+                <li className="flex items-start">
+                  <span className="mr-2 text-white">•</span>
+                  <p><span className='font-bold'>Technology Integration </span>– Promote technology-enabled and digital learning practices.</p>
+                </li>
+
+                <li className="flex items-start">
+                  <span className="mr-2 text-white">•</span>
+                  <p><span className='font-bold'>Inclusivity & Equity </span>– Ensure inclusive education and gender equity for all learners.</p>
+                </li>
+
+                <li className="flex items-start">
+                  <span className="mr-2 text-white">•</span>
+                  <p><span className='font-bold'>Ethical & Professional Leadership </span>– Develop ethical, reflective, and responsible educators</p>
+                </li>
+
+                <li className="flex items-start">
+                  <span className="mr-2 text-white">•</span>
+                  <p><span className='font-bold'>Nation-Building </span>– Contribute to Viksit Bharat @2047 through empowered teachers.</p>
+                </li>
+
+              </ul>
             </div>
 
           </div>
@@ -122,10 +179,10 @@ const AboutUs = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: 'Integrity', icon: CheckCircle2, desc: 'We uphold the highest standards of honesty and strong moral principles in all our actions.' },
-              { title: 'Innovation', icon: Sparkles, desc: 'We constantly seek new ways to improve teaching methodologies and embrace technology.' },
-              { title: 'Collaboration', icon: Users, desc: 'We believe in the power of working together with institutions and communities.' },
-              { title: 'Inclusivity', icon: Heart, desc: 'We strive to create an educational environment that respects and welcomes diversity.' }
+              { title: 'Professionalism & Continuous Learning', icon: CheckCircle2, desc: 'Uphold ethical standards and promote lifelong learning, research, and skill development' },
+              { title: 'Innovation & Creativity', icon: Sparkles, desc: 'Encourage forward-thinking pedagogical practices and modern teaching methodologies' },
+              { title: 'Collaboration & Inclusivity ', icon: Users, desc: 'Foster teamwork, partnerships, and equitable opportunities for all educators and learners.' },
+              { title: 'Empowerment & Nation-Building', icon: Heart, desc: 'Enable teachers to be change agents contributing to a skilled, empowered, and socially responsible India' }
             ].map((value, idx) => (
               <div key={idx} className="bg-white p-8 rounded-xl shadow-sm border-b-4 border-transparent hover:border-amber-500 hover:shadow-xl transition duration-300 group">
                 <div className="mb-6 inline-block p-3 bg-emerald-50 rounded-lg group-hover:bg-emerald-900 transition duration-300">
