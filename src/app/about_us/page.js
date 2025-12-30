@@ -19,7 +19,7 @@ const AboutUs = () => {
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">About Us</h1>
           <p className="text-emerald-200 text-sm md:text-base max-w-2xl mx-auto">
-            Get to know the people and the purpose behind the Council for Teacher Education Foundation, Assam Chapter.
+            Council for Teacher Education Foundation (CTEF), Assam Chapter works to promote excellence in teacher education by fostering innovation, professional development, and academic collaboration.
           </p>
         </div>
       </header>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, MapIcon, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 function ExecutiveCommitee() {
   const members = [
@@ -48,6 +48,7 @@ function ExecutiveCommitee() {
         "Associate Professor, Dept. of Education, Bapujee College, PO Sarthebari, Dist: Barpeta-781307",
     },
   ];
+
   return (
     <section className="py-20 bg-slate-50">
       <div className="container mx-auto px-4">

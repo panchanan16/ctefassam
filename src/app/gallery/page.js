@@ -13,7 +13,7 @@ const Gallery = () => {
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4"> Our Gallery</h1>
           <p className="text-emerald-200 text-sm md:text-base max-w-2xl mx-auto">
-            Explore our collection of memorable moments and achievements. Each image tells a story of dedication, collaboration, and success. Click on any image to view it in full size and navigate through our gallery.
+            A visual journey through CTEF’s events, achievements, and initiatives—capturing moments of purpose, partnership, and progress. Click on any image to explore in full view.
           </p>
         </div>
       </header>

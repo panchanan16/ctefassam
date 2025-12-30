@@ -44,9 +44,9 @@ const CTEFAssam = () => {
               <span className="text-amber-500 text-2xl">✦</span>
             </div>
             <h1 className="text-4xl lg:text-6xl font-extrabold text-emerald-950 mb-4 leading-tight">
-              Shaping The <br />
-              Future Teaching <br />
-              <span className="text-amber-500">in Assam</span>
+              Advancing Teacher Education<br />
+              as Envisioned <br />
+              <span className="text-amber-500">in NEP 2020</span>
             </h1>
             <p className="text-gray-600 mb-8 max-w-lg leading-relaxed">
               The CTEF Assam Chapter is committed to enhancing the quality of teacher education through strategic collaborations, adoption of best practices, and continuous professional development.
