@@ -49,7 +49,7 @@ const CTEFAssam = () => {
               <span className="text-amber-500">in NEP 2020</span>
             </h1>
             <p className="text-gray-600 mb-8 max-w-lg leading-relaxed">
-              The CTEF Assam Chapter is committed to enhancing the quality of teacher education through strategic collaborations, adoption of best practices, and continuous professional development.
+              CTEF Assam promotes quality teacher preparation through continuous professional development, academic collaboration, and evidence-based best practices aligned with NEP 2020.
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="bg-emerald-900 text-white px-8 py-3 rounded font-semibold hover:bg-emerald-800 transition shadow-lg">
