@@ -69,7 +69,7 @@ function ExecutiveCommitee() {
                 <img
                   src={`${item.photo}`}
                   alt="Member"
-                  className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                  className="w-full h-full object-contain group-hover:scale-105 transition duration-500"
                 />
               </div>
               <div className="p-6 text-center">

@@ -10,59 +10,59 @@ const GalleryHome = () => {
   const galleryItems = [
     {
       id: 1,
-      title: "Women's Conclave 2025",
+      title: "An Interactive Programmme On NEP-2020 Effective Implementation and Challenges To Overcome in School Education",
       image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
-      date: "Nov 24, 2025",
+        "/gallery/gallery1.jpg",
+      date: "April 04, 2022",
     },
     {
       id: 2,
-      title: "Team Building Session",
+      title: "Happy Hours of Effective Learning By School Children at Darrang",
       image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
-      date: "Oct 15, 2025",
+        "/gallery/album12.jpg",
+      date: "April 06, 2020",
     },
     {
       id: 3,
-      title: "Award Ceremony",
+      title: "13th day happy schooling programme in 3 Tea gardens at Jorhat",
       image:
-        "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80",
-      date: "Sep 20, 2025",
+        "/gallery/album17.jpg",
+      date: "June 08, 2020",
     },
     {
       id: 4,
-      title: "Leadership Workshop",
+      title: "Press Conference For The 34th CTEF Annual International E Conference",
       image:
-        "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&q=80",
-      date: "Aug 10, 2025",
+        "/gallery/album27.jpg",
+      date: "19th and 20th December 2020",
     },
     {
       id: 5,
-      title: "Tech Innovation Summit",
+      title: "Jorhat District Activity organised in collaboration with Chinamara Higher Secondary School, Jorhat",
       image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80",
-      date: "Jul 18, 2025",
+        "/gallery/album62.jpg",
+      date: "Feb 17, 2022",
     },
     {
       id: 6,
-      title: "Annual Team Retreat",
+      title: "CTEF Jorhat District Chapter in collaboration with Gorumora High school, Jorhat organised an awareness program for teachers on Project Based Learning",
       image:
-        "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80",
-      date: "Jun 05, 2025",
+        "/gallery/album64.jpg",
+      date: "Feb 23, 2022",
     },
     {
       id: 7,
-      title: "Milestone Celebration",
+      title: "Workshop on Taxonomy of Educational objectives organised by CTEF Assam ,Kamrup (R) at Ulubari H.S school",
       image:
-        "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&q=80",
-      date: "May 12, 2025",
+        "/gallery/album73.jpg",
+      date: "April 29, 2022",
     },
     {
       id: 8,
-      title: "Design Thinking Session",
+      title: "Workshop on Guidance and Counselling of Teachers organised by Malowali High School, Jorhat held on 24-09-2022",
       image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
-      date: "Apr 22, 2025",
+        "/gallery/album79.jpg",
+      date: "Sep 24, 2022",
     },
   ];
 

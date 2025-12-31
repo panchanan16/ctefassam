@@ -45,8 +45,8 @@ const CTEFAssam = () => {
             </div>
             <h1 className="text-4xl lg:text-6xl font-extrabold text-emerald-950 mb-4 leading-tight">
               Advancing Teacher Education<br />
-              as Envisioned <br />
-              <span className="text-amber-500">in NEP 2020</span>
+              <span className="text-amber-500">as Envisioned</span> <br />
+              <span>in NEP 2020</span>
             </h1>
             <p className="text-gray-600 mb-8 max-w-lg leading-relaxed">
               CTEF Assam promotes quality teacher preparation through continuous professional development, academic collaboration, and evidence-based best practices aligned with NEP 2020.
@@ -186,10 +186,10 @@ const CTEFAssam = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Standard */}
             <div className="bg-white p-8 rounded-xl shadow border border-gray-100 hover:border-emerald-500 transition relative">
-              <h3 className="font-bold text-gray-500 uppercase tracking-wider text-sm">Individual</h3>
+              <h3 className="font-bold text-gray-500 uppercase tracking-wider text-sm">Life Member CTEF</h3>
               <div className="my-4">
-                <span className="text-4xl font-bold text-emerald-900">₹800</span>
-                <span className="text-gray-400 text-sm">/year</span>
+                <span className="text-4xl font-bold text-emerald-900">₹1000</span>
+                <span className="text-gray-400 text-sm"></span>
               </div>
               <ul className="space-y-3 mb-8 text-sm text-gray-600">
                 <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500" /> Access to workshops</li>
@@ -202,10 +202,10 @@ const CTEFAssam = () => {
             {/* Premium */}
             <div className="bg-white p-8 rounded-xl shadow-xl border-2 border-amber-400 relative transform md:-translate-y-4">
               <div className="absolute top-0 right-0 bg-amber-400 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">POPULAR</div>
-              <h3 className="font-bold text-amber-500 uppercase tracking-wider text-sm">Life Time</h3>
+              <h3 className="font-bold text-amber-500 uppercase tracking-wider text-sm">Donor Membership </h3>
               <div className="my-4">
-                <span className="text-4xl font-bold text-emerald-900">₹2,000</span>
-                <span className="text-gray-400 text-sm">/one-time</span>
+                <span className="text-4xl font-bold text-emerald-900">₹25000</span>
+                <span className="text-gray-400 text-sm">above</span>
               </div>
               <ul className="space-y-3 mb-8 text-sm text-gray-600">
                 <li className="flex gap-2"><CheckCircle2 size={16} className="text-amber-500" /> All Individual benefits</li>
@@ -218,10 +218,10 @@ const CTEFAssam = () => {
 
             {/* Institution */}
             <div className="bg-white p-8 rounded-xl shadow border border-gray-100 hover:border-emerald-500 transition">
-              <h3 className="font-bold text-gray-500 uppercase tracking-wider text-sm">Institutional</h3>
+              <h3 className="font-bold text-gray-500 uppercase tracking-wider text-sm">Institutional Membership</h3>
               <div className="my-4">
-                <span className="text-4xl font-bold text-emerald-900">₹5,000</span>
-                <span className="text-gray-400 text-sm">/year</span>
+                <span className="text-4xl font-bold text-emerald-900">₹2500</span>
+                <span className="text-gray-400 text-sm"></span>
               </div>
               <ul className="space-y-3 mb-8 text-sm text-gray-600">
                 <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500" /> up to 10 members</li>

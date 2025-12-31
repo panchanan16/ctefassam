@@ -13,21 +13,42 @@ function JoinForm() {
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Name Individual / Institution</label>
                     <input type="text" className="w-full bg-gray-50 border border-gray-300 rounded px-4 py-3 focus:outline-none focus:border-amber-500" placeholder="Dr. John Doe" />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Proffessional Status</label>
+                    <input type="text" className="w-full bg-gray-50 border border-gray-300 rounded px-4 py-3 focus:outline-none focus:border-amber-500" placeholder="john@example.com" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Residential Mailing Address</label>
+                    <input type="text" className="w-full bg-gray-50 border border-gray-300 rounded px-4 py-3 focus:outline-none focus:border-amber-500" placeholder="john@example.com" />
+                  </div>
+                   <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Institutional Address</label>
+                    <input type="text" className="w-full bg-gray-50 border border-gray-300 rounded px-4 py-3 focus:outline-none focus:border-amber-500" placeholder="john@example.com" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Pesonal Email ID</label>
                     <input type="email" className="w-full bg-gray-50 border border-gray-300 rounded px-4 py-3 focus:outline-none focus:border-amber-500" placeholder="john@example.com" />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Institutional Email ID</label>
+                    <input type="email" className="w-full bg-gray-50 border border-gray-300 rounded px-4 py-3 focus:outline-none focus:border-amber-500" placeholder="john@example.com" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Personal Contact Number</label>
+                    <input type="tel" className="w-full bg-gray-50 border border-gray-300 rounded px-4 py-3 focus:outline-none focus:border-amber-500" placeholder="+91 00000 00000" />
+                  </div>
+                   <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Institutional Contact Number</label>
                     <input type="tel" className="w-full bg-gray-50 border border-gray-300 rounded px-4 py-3 focus:outline-none focus:border-amber-500" placeholder="+91 00000 00000" />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">Institution</label>
-                    <input type="text" className="w-full bg-gray-50 border border-gray-300 rounded px-4 py-3 focus:outline-none focus:border-amber-500" placeholder="University/School Name" />
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Alternate Contact Number</label>
+                    <input type="tel" className="w-full bg-gray-50 border border-gray-300 rounded px-4 py-3 focus:outline-none focus:border-amber-500" placeholder="+91 00000 00000" />
                   </div>
+                  
                 </div>
 
                 <div>
