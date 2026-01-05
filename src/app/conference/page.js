@@ -19,11 +19,10 @@ const EConference = () => {
       month: "Oct",
       image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       title: "National Education Policy 2025: A Deep Dive",
-      time: "10:00 AM - 01:00 PM IST",
-      platform: "Zoom Platform",
+      time: "10:00 AM - 01:00 PM",
+      platform: "Zoom Platform", // Optional Field present
       venue: "Convention Center, Guwahati (Hybrid)", // Optional Field present
       collaboration: "Ministry of Education", // Optional Field present
-      type: "LIVE WEBINAR"
     },
     {
       id: 2,
@@ -31,7 +30,7 @@ const EConference = () => {
       month: "Nov",
       image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       title: "Pedagogy & Digital Tools Workshop",
-      time: "02:00 PM - 05:00 PM IST",
+      time: "02:00 PM - 05:00 PM",
       platform: "Google Meet",
       // No Venue (Purely Online)
       collaboration: "Tech for Teach NGO", // Optional Field present
@@ -42,7 +41,7 @@ const EConference = () => {
       month: "Dec",
       image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       title: "Leadership in Education Summit",
-      time: "09:00 AM - 04:00 PM IST",
+      time: "09:00 AM - 04:00 PM",
       platform: "Zoom Platform",
       venue: "University Auditorium, Assam", // Optional Field present
       // No Collaboration field

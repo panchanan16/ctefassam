@@ -97,7 +97,7 @@ const CTEFAssam = () => {
               <div className="relative p-4 border-2 border-dashed border-emerald-900 rounded-lg">
                 <div className="absolute inset-0 bg-emerald-900/5 translate-x-4 translate-y-4 rounded-lg -z-10"></div>
                 <img
-                  src="/home/chairman.jpg"
+                  src="/home/gulap.jpeg"
                   alt="Chairman"
                   className="w-full h-auto rounded shadow-lg"
                 />

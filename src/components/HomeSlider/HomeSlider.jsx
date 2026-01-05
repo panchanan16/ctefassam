@@ -6,15 +6,19 @@ const HomeSlider = () => {
 
   const images = [
     { 
-      src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1000", 
+      src: "/slider/slider_1_ctef.jpeg", 
       alt: "Teacher in classroom" 
     },
     { 
-      src: "https://images.unsplash.com/photo-1544531585-9847b68c8c86?auto=format&fit=crop&q=80&w=1000", 
+      src: "/slider/slider_2_ctef.jpeg", 
       alt: "Collaborative learning" 
     },
     { 
-      src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=1000", 
+      src: "/slider/slider_3_ctef.jpeg", 
+      alt: "Digital education" 
+    },
+    { 
+      src: "/slider/slider_4_ctef.jpeg", 
       alt: "Digital education" 
     },
   ];

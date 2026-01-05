@@ -15,11 +15,20 @@ function ExecutiveCommitee() {
     },
     {
       name: "Dr. Archana Bhattacharjee",
-      photo: "/executive/archana.jpg",
+      photo: "/executive/archana.jpeg",
       designation: "VICE-CHAIRMAN",
       ph: "+91 7002729378",
       email: "archanabhattacharjee183@gmail.com",
       location: '"Niramoyee", Shanti-Path, PO-Borbheta, Jorhat-785001, Assam',
+    },
+    {
+      name: "Tribeni Saikia",
+      photo: "/executive/tribeni.jpeg",
+      designation: "SECRETARY",
+      ph: "+91 9101276508",  
+      email: "saikia.tribeni76@gmail.com",
+      location:
+        "Nagaon, Assam",
     },
     {
       name: "Dr. Satyabrata Baruah",
@@ -40,7 +49,7 @@ function ExecutiveCommitee() {
     },
     {
       name: "Dr. Gitanjalee Bhuyan",
-      photo: "/executive/geetanjali.jpg",
+      photo: "/executive/geetanjali.jpeg",
       designation: "SECRETARY",
       ph: "+91 9864937666",
       email: "gitanjaleebhuyan@gmail.com",
