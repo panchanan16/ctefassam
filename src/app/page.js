@@ -167,7 +167,7 @@ const CTEFAssam = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <img src="/home/home_mission_1.jpg" className="rounded-lg shadow-md h-40 w-full object-cover" />
-              <img src="/home/home_mission_2.jpg" className="rounded-lg shadow-md h-40 w-full object-cover translate-y-8" />
+              <img src="/home/home_mission_3.jpeg" className="rounded-lg shadow-md h-40 w-full object-cover translate-y-8" />
             </div>
           </div>
         </div>

@@ -20,12 +20,22 @@ const EConference = () => {
       image: "/events/reclaiming_roots.jpg",
       title: "National Webinar on Reclaiming Our Roots: Exploring India's Intellectual Tradition & Why it Matters",
       time: "06:30 PM - 07:30 PM",
-      platform: "Zoom Platform", // Optional Field present
+      platform: "Zoom Platform", 
     },
   ];
 
 
   const newPastdata = [
+     {
+      id: 0,
+      date: "14th December, 2025",
+      image: "/events/beyond_numbers.jpeg",
+      title: "International Webinar on Beyond Numbers: Measuring Progress Towards Gender Equity and Inclusivity",
+      time: "6.30 P.M to 8.30 P.M",
+      platform: "Zoom Meeting",
+      venue: "",
+      collaboration: "",
+    },
     {
       id: 1,
       date: "",
@@ -660,7 +670,7 @@ const EConference = () => {
                   <img
                     src={event.image}
                     alt={event.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    className="w-full h-full object-contain group-hover:scale-110 transition duration-500"
                   />                  
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
