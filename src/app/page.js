@@ -77,7 +77,7 @@ const CTEFAssam = () => {
               <h3 className="text-3xl font-bold text-emerald-900">50+</h3>
               <p className="text-xs text-gray-500 font-medium uppercase mt-1">Institutions</p>
             </div> */}
-            <div className="text-center border-r-3 border-amber-500 last:border-0">
+            <div className="text-center md:border-r-3 border-amber-500 last:border-0">
               <h3 className="text-3xl font-bold text-emerald-900">250+</h3>
               <p className="text-xs text-gray-500 font-medium uppercase mt-1">Events</p>
             </div>

@@ -33,13 +33,13 @@ const HomeSlider = () => {
   }, [images.length]);
 
   return (
-    <div className="relative group max-w-2xl mx-auto md:mx-0">
+    <div className="relative group w-full lg:max-w-2xl mx-auto md:mx-0">
       
       {/* Yellow decoration behind - 100% same as original */}
       <div className="absolute -top-4 -right-4 md:-top-6 md:-right-6 w-full h-full bg-amber-400 rounded-tr-[40px] md:rounded-tr-[50px] rounded-bl-[40px] md:rounded-bl-[50px] -z-10"></div>
 
       {/* Main Image Container */}
-      <div className="relative w-full h-[350px] md:h-[400px] rounded-tr-[40px] md:rounded-tr-[50px] rounded-bl-[40px] md:rounded-bl-[50px] shadow-2xl border-4 border-white overflow-hidden">
+      <div className="relative w-full h-[300px] md:h-[400px] rounded-tr-[40px] md:rounded-tr-[50px] rounded-bl-[40px] md:rounded-bl-[50px] shadow-2xl border-4 border-white overflow-hidden">
         
         {images.map((image, index) => (
           <div
