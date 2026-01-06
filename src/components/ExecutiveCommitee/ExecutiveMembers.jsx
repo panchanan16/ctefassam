@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Sparkles, Mail, Phone, MapPin } from "lucide-react";
 import allMembers from '@/data.json'
 
-const ExecutiveCommittee = () => {
+const ExecutiveCommittee = ({title}) => {
 
   const [visibleCount, setVisibleCount] = useState(15);
 
@@ -13,13 +13,13 @@ const ExecutiveCommittee = () => {
   };
 
   return (
-    <section className="py-20 bg-slate-50 relative overflow-hidden">
+    <section className={`py-20 bg-white relative overflow-hidden`}>
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-16 relative">
           <div className="inline-block relative">
             <h2 className="text-3xl md:text-4xl font-bold text-amber-500 relative z-10">
-              <span className="text-black">Executive</span> Committee
+              <span className="text-black">{title ? title.split(" ")[0] : "Executive"}</span> {title ? title.split(" ")[1] : "Members"}
             </h2>
 
             {/* Brush Stroke */}

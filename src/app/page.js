@@ -8,6 +8,7 @@ import GalleryHome from '@/components/home/Gallery';
 import JoinForm from '@/components/JoinForm/JoinForm';
 import HomeSlider from '@/components/HomeSlider/HomeSlider';
 import ExecutiveCommitee from '@/components/ExecutiveCommitee/ExecutiveCommitee';
+import Link from 'next/link';
 
 const CTEFAssam = () => {
   return (
@@ -55,9 +56,9 @@ const CTEFAssam = () => {
               <button className="bg-emerald-900 text-white px-8 py-3 rounded font-semibold hover:bg-emerald-800 transition shadow-lg">
                 Discover More
               </button>
-              <button className="border-2 border-emerald-900 text-emerald-900 px-8 py-3 rounded font-semibold hover:bg-emerald-50 transition">
+              <Link href={'/join_us'} className="border-2 border-emerald-900 text-emerald-900 px-8 py-3 rounded font-semibold hover:bg-emerald-50 transition">
                 Join Now
-              </button>
+              </Link>
             </div>
           </div>
 

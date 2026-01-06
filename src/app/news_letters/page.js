@@ -1,4 +1,5 @@
 "use client";
+import Footer from '@/components/common/Footer';
 import Header from '@/components/common/Header';
 import { Download, CalendarDays } from 'lucide-react';
 
@@ -6,30 +7,51 @@ import { Download, CalendarDays } from 'lucide-react';
 const newsletters = [
     {
         id: 1,
-        title: "January 2026 Community Update",
-        date: "Jan 05, 2026",
-        coverImage: "https://images.unsplash.com/photo-1557683316-973673baf926?w=800&auto=format&fit=crop&q=60",
+        title: "CTEF Assam Chapter, 12 March 2024",
+        date: "Mar 12, 2024",
+        coverImage: "/news_letters/nl_1.jpg",
         fileUrl: "#",
     },
     {
         id: 2,
-        title: "Annual Financial Report 2025",
-        date: "Dec 20, 2025",
-        coverImage: "https://images.unsplash.com/photo-1554224155-984063529017?w=800&auto=format&fit=crop&q=60",
+        title: "CTEF Assam Chapter, 12 August 2023",
+        date: "Aug 12, 2023",
+        coverImage: "/news_letters/nl_2.jpg",
         fileUrl: "#",
     },
     {
         id: 3,
-        title: "Q4 Strategic Insights",
-        date: "Nov 15, 2025",
-        coverImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
+        title: "CTEF Assam Chapter, 25 February 2023",
+        date: "Feb 25, 2023",
+        coverImage: "/news_letters/nl_3.jpg",
         fileUrl: "#",
     },
     {
         id: 4,
-        title: "October Events Recap",
-        date: "Oct 10, 2025",
-        coverImage: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&auto=format&fit=crop&q=60",
+        title: "CTEF Assam Chapter, 06 September 2022",
+        date: "Sep 06, 2022",
+        coverImage: "/news_letters/nl_4.jpg",
+        fileUrl: "#",
+    },
+    {
+        id: 5,
+        title: "CTEF Assam Chapter, 18 January 2022",
+        date: "Jan 18, 2022",
+        coverImage: "/news_letters/nl_5.jpg",
+        fileUrl: "#",
+    },
+    {
+        id: 6,
+        title: "CTEF Assam Chapter, 01 June 2021",
+        date: "Jun 01, 2021",
+        coverImage: "/news_letters/nl_6.jpg",
+        fileUrl: "#",
+    },
+    {
+        id: 7,
+        title: "CTEF Assam Chapter, 01 January 2021",
+        date: "Jan 01, 2021",
+        coverImage: "/news_letters/nl_7.jpg",
         fileUrl: "#",
     },
 ];
@@ -49,7 +71,7 @@ export default function NewsletterPage() {
             </div>
 
             {/* Content Section */}
-            <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-10">
                 {/* Section Title with accent color */}
                 <div className="mb-10">
                     <span className="text-[#f59e0b] font-semibold uppercase tracking-wider text-sm">
@@ -61,7 +83,7 @@ export default function NewsletterPage() {
                 </div>
 
                 {/* Grid Layout */}
-                <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-8 grid-cols-1 sm:grid-cols-3 lg:grid-cols-3">
                     {newsletters.map((item) => (
                         <div
                             key={item.id}
@@ -72,7 +94,7 @@ export default function NewsletterPage() {
                                 <img
                                     src={item.coverImage}
                                     alt={item.title}
-                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                    className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-[#004d33]/0 group-hover:bg-[#004d33]/10 transition-colors duration-300" />
                             </div>
@@ -107,6 +129,7 @@ export default function NewsletterPage() {
                     ))}
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

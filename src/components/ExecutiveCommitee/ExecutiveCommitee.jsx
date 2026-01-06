@@ -24,7 +24,7 @@ function ExecutiveCommitee() {
     {
       name: "Tribeni Saikia",
       photo: "/executive/tribeni.jpeg",
-      designation: "SECRETARY",
+      designation: "Assistant Secretary General",
       ph: "+91 9101276508",
       email: "saikia.tribeni76@gmail.com",
       location: "Nagaon, Assam",
@@ -62,7 +62,7 @@ function ExecutiveCommitee() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-emerald-950 inline-block border-b-4 border-amber-400 pb-2">
-            Our Core<span className="text-amber-500">Committee</span>
+            Our Core<span className="text-amber-500"> Committee</span>
           </h2>
         </div>
 

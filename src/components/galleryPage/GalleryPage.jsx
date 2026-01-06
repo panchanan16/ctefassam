@@ -17,114 +17,63 @@ function GalleryPage() {
   const [isLoading, setIsLoading] = useState(false);
 
   // Gallery images data
-  const galleryImages = [
+
+    const galleryImages = [
     {
       id: 1,
-      url: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
-      title: "Modern Workspace",
-      date: "2024-11-15",
+      title: "An Interactive Programmme On NEP-2020 Effective Implementation and Challenges To Overcome in School Education",
+      image:
+        "/gallery/gallery1.jpg",
+      date: "April 04, 2022",
     },
     {
       id: 2,
-      url: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop",
-      title: "Team Collaboration",
-      date: "2024-11-10",
+      title: "Happy Hours of Effective Learning By School Children at Darrang",
+      image:
+        "/gallery/album12.jpg",
+      date: "April 06, 2020",
     },
     {
       id: 3,
-      url: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop",
-      title: "Business Meeting",
-      date: "2024-11-08",
+      title: "13th day happy schooling programme in 3 Tea gardens at Jorhat",
+      image:
+        "/gallery/album17.jpg",
+      date: "June 08, 2020",
     },
     {
       id: 4,
-      url: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop",
-      title: "Strategic Planning",
-      date: "2024-11-05",
+      title: "Press Conference For The 34th CTEF Annual International E Conference",
+      image:
+        "/gallery/album27.jpg",
+      date: "19th and 20th December 2020",
     },
     {
       id: 5,
-      url: "https://images.unsplash.com/photo-1560264280-88b68371db39?w=800&h=600&fit=crop",
-      title: "Innovation Hub",
-      date: "2024-11-01",
+      title: "Jorhat District Activity organised in collaboration with Chinamara Higher Secondary School, Jorhat",
+      image:
+        "/gallery/album62.jpg",
+      date: "Feb 17, 2022",
     },
     {
       id: 6,
-      url: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-      title: "Team Success",
-      date: "2024-10-28",
+      title: "CTEF Jorhat District Chapter in collaboration with Gorumora High school, Jorhat organised an awareness program for teachers on Project Based Learning",
+      image:
+        "/gallery/album64.jpg",
+      date: "Feb 23, 2022",
     },
     {
       id: 7,
-      url: "https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?w=800&h=600&fit=crop",
-      title: "Creative Session",
-      date: "2024-10-25",
+      title: "Workshop on Taxonomy of Educational objectives organised by CTEF Assam ,Kamrup (R) at Ulubari H.S school",
+      image:
+        "/gallery/album73.jpg",
+      date: "April 29, 2022",
     },
     {
       id: 8,
-      url: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop",
-      title: "Office Culture",
-      date: "2024-10-20",
-    },
-    {
-      id: 9,
-      url: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=600&fit=crop",
-      title: "Project Launch",
-      date: "2024-10-15",
-    },
-    {
-      id: 10,
-      url: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop",
-      title: "Workshop Day",
-      date: "2024-10-12",
-    },
-    {
-      id: 11,
-      url: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&h=600&fit=crop",
-      title: "Team Building",
-      date: "2024-10-08",
-    },
-    {
-      id: 12,
-      url: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=600&fit=crop",
-      title: "Annual Conference",
-      date: "2024-10-05",
-    },
-    {
-      id: 13,
-      url: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800&h=600&fit=crop",
-      title: "Design Sprint",
-      date: "2024-10-01",
-    },
-    {
-      id: 14,
-      url: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=600&fit=crop",
-      title: "Company Gathering",
-      date: "2024-09-28",
-    },
-    {
-      id: 15,
-      url: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop",
-      title: "Training Session",
-      date: "2024-09-25",
-    },
-    {
-      id: 16,
-      url: "https://images.unsplash.com/photo-1552581234-26160f608093?w=800&h=600&fit=crop",
-      title: "Networking Event",
-      date: "2024-09-20",
-    },
-    {
-      id: 17,
-      url: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&h=600&fit=crop",
-      title: "Product Development",
-      date: "2024-09-15",
-    },
-    {
-      id: 18,
-      url: "https://images.unsplash.com/photo-1543269664-56d93c1b41a6?w=800&h=600&fit=crop",
-      title: "Client Presentation",
-      date: "2024-09-10",
+      title: "Workshop on Guidance and Counselling of Teachers organised by Malowali High School, Jorhat held on 24-09-2022",
+      image:
+        "/gallery/album79.jpg",
+      date: "Sep 24, 2022",
     },
   ];
 
@@ -199,7 +148,7 @@ function GalleryPage() {
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
-                  src={image.url}
+                  src={image.image}
                   alt={image.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
@@ -210,7 +159,7 @@ function GalleryPage() {
                   }}
                 >
                   <div className="p-4 text-white w-full">
-                    <h3 className="font-bold text-lg mb-1">{image.title}</h3>
+                    <h3 className="font-bold text-sm mb-1">{image.title}</h3>
                     <div className="flex items-center gap-2 text-sm">
                       <Calendar size={14} />
                       <span>
@@ -300,9 +249,9 @@ function GalleryPage() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={selectedImage.url}
+              src={selectedImage.image}
               alt={selectedImage.title}
-              className="max-w-full max-h-[calc(90vh-120px)] w-auto h-auto object-contain rounded-lg shadow-2xl"
+              className="max-w-full max-h-[calc(90vh-120px)] w-auto h-auto mx-auto object-contain rounded-lg shadow-2xl"
             />
 
             {/* Image Info */}

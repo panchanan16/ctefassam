@@ -1,5 +1,6 @@
 import Footer from '@/components/common/Footer';
 import Header from '@/components/common/Header';
+import ExecutiveCommittee from '@/components/ExecutiveCommitee/ExecutiveMembers';
 import ReadMore from '@/components/readmore/ReadMore';
 import {
   Target, Eye, Heart, Users, CheckCircle2,
@@ -196,64 +197,8 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* ================= SECTION 5: OUR MEMBERS ================= */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-
-          {/* Header specific to the 'Executive Committee' style requested */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-amber-500 relative inline-block">
-              Our Members
-              <Sparkles className="absolute -top-4 -right-8 text-amber-400 w-6 h-6 animate-pulse" />
-            </h2>
-            <p className="text-gray-500 mt-4 max-w-xl mx-auto">
-              Meet the dedicated professionals leading the charge for better education in Assam.
-            </p>
-          </div>
-
-          {/* Using the Specific 'Green Vertical Bar' Card Style Requested previously */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {[
-              { name: "Dr. B. K. Das", role: "Chairman", desc: "Former Dean, State Engineering College" },
-              { name: "Prof. S. Hazarika", role: "Secretary", desc: "HOD Computer Science, Tech University" },
-              { name: "Dr. Nilima Bhagabati", role: "Advisor", desc: "Senior Educationist" },
-              { name: "Dr. A. K. Sharma", role: "Treasurer", desc: "Professor, Guwahati University" },
-              { name: "Mrs. R. Devi", role: "Executive Member", desc: "Principal, City College" },
-              { name: "Mr. P. Gogoi", role: "Coordinator", desc: "District Education Officer" },
-              { name: "Dr. S. Barua", role: "Member", desc: "Lecturer, DIET" },
-              { name: "Prof. M. Ahmed", role: "Member", desc: "Research Scholar" },
-              { name: "Dr. J. Kalita", role: "Member", desc: "Asst. Professor" }
-            ].map((member, index) => (
-              <div
-                key={index}
-                className="bg-slate-50 rounded-xl p-6 shadow-sm hover:shadow-md transition duration-300 flex items-stretch gap-4 border border-gray-100 group"
-              >
-                {/* Green Vertical Bar */}
-                <div className="w-1.5 bg-emerald-600 rounded-full shrink-0 group-hover:bg-amber-500 transition-colors"></div>
-
-                {/* Content */}
-                <div className="flex flex-col justify-center">
-                  <h3 className="text-gray-900 font-bold text-lg leading-tight group-hover:text-emerald-900 transition">
-                    {member.name}
-                  </h3>
-                  <p className="text-emerald-600 font-medium text-xs uppercase mt-1 tracking-wide">
-                    {member.role}
-                  </p>
-                  <p className="text-gray-400 text-xs mt-2">
-                    {member.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <button className="px-8 py-3 rounded-full border border-emerald-900 text-emerald-900 font-bold hover:bg-emerald-900 hover:text-white transition duration-300">
-              View Full Member Directory
-            </button>
-          </div>
-        </div>
-      </section>
+      {/* ================= SECTION 5: OUR MEMBERS ================= */}     
+      <ExecutiveCommittee title="Our Members" />
 
       <Footer />
 
