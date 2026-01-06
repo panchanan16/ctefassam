@@ -34,13 +34,13 @@ const AboutUs = () => {
               <div className="relative p-5 border-2 border-dashed border-emerald-200 rounded-2xl">
                 <div className="absolute top-0 left-0 w-full h-full bg-emerald-50 rounded-2xl -rotate-2 -z-10"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="/home/about_hero.webp"
                   alt="CTEF Team Meeting"
                   className="w-full h-auto rounded-xl shadow-lg object-cover aspect-[4/3]"
                 />
                 {/* Floating Badge */}
                 <div className="absolute -bottom-6 -right-6 bg-amber-500 text-white p-6 rounded-xl shadow-xl hidden md:block">
-                  <p className="text-3xl font-bold">20+</p>
+                  <p className="text-3xl font-bold">25+</p>
                   <p className="text-xs uppercase tracking-wider font-medium">Years of Service</p>
                 </div>
               </div>

@@ -75,6 +75,16 @@ function Header() {
             Events
           </Link>
           <Link
+            href="/news_letters"
+            className={`pb-1 transition-all ${
+              isActive("/news_letters")
+                ? "text-emerald-900 font-bold border-b-2 border-amber-500"
+                : "hover:text-emerald-900 border-b-2 border-transparent hover:border-amber-500"
+            }`}
+          >
+            News Letters
+          </Link>
+          <Link
             href="/gallery"
             className={`pb-1 transition-all ${
               isActive("/gallery")

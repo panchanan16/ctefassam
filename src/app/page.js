@@ -17,8 +17,8 @@ const CTEFAssam = () => {
       <div className="bg-emerald-950 text-white text-xs py-2">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
           <div className="flex items-center space-x-6">
-            <span className="flex items-center gap-2"><Phone size={14} className="text-amber-400" /> +91 98765 43210</span>
-            <span className="flex items-center gap-2"><Mail size={14} className="text-amber-400" /> info@ctefassam.org</span>
+            <span className="flex items-center gap-2"><Phone size={14} className="text-amber-400" /> +91 98640 66549</span>
+            <span className="flex items-center gap-2"><Mail size={14} className="text-amber-400" />ctefassam@gmail.com</span>
           </div>
           <div className="flex items-center space-x-4">
             <a href="#" className="hover:text-amber-400 transition"><Facebook size={14} /></a>
@@ -44,8 +44,8 @@ const CTEFAssam = () => {
               <span className="text-amber-500 text-2xl">✦</span>
             </div>
             <h1 className="text-4xl lg:text-6xl font-extrabold text-emerald-950 mb-4 leading-tight">
-              Advancing Teacher Education<br />
-              <span className="text-amber-500">as Envisioned</span> <br />
+              Advancing Teacher Education as<br />
+              <span className="text-amber-500">Envisioned</span> <br />
               <span>in NEP 2020</span>
             </h1>
             <p className="text-gray-600 mb-8 max-w-lg leading-relaxed">
@@ -67,22 +67,22 @@ const CTEFAssam = () => {
 
         {/* Stats Strip - Floating */}
         <div className="container mx-auto w-screen lg:w-[50vw] px-4 relative mt-12 lg:-mt-8 mr-0 z-20">
-          <div className="bg-white rounded-2xl shadow-xl border border-amber-500 p-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="bg-white rounded-2xl shadow-xl border border-amber-500 p-6 grid grid-cols-2 md:grid-cols-3 gap-6">
             <div className="text-center border-r-3 border-amber-500 last:border-0">
               <h3 className="text-3xl font-bold text-emerald-900">500+</h3>
               <p className="text-xs text-gray-500 font-medium uppercase mt-1">Active Members</p>
             </div>
-            <div className="text-center border-r-3 border-amber-500 last:border-0">
+            {/* <div className="text-center border-r-3 border-amber-500 last:border-0">
               <h3 className="text-3xl font-bold text-emerald-900">50+</h3>
               <p className="text-xs text-gray-500 font-medium uppercase mt-1">Institutions</p>
-            </div>
+            </div> */}
             <div className="text-center border-r-3 border-amber-500 last:border-0">
-              <h3 className="text-3xl font-bold text-emerald-900">40+</h3>
+              <h3 className="text-3xl font-bold text-emerald-900">250+</h3>
               <p className="text-xs text-gray-500 font-medium uppercase mt-1">Events</p>
             </div>
             <div className="text-center">
-              <h3 className="text-3xl font-bold text-emerald-900">20+</h3>
-              <p className="text-xs text-gray-500 font-medium uppercase mt-1">Districts</p>
+              <h3 className="text-3xl font-bold text-emerald-900">12+</h3>
+              <p className="text-xs text-gray-500 font-medium uppercase mt-1">CTEF Districts</p>
             </div>
           </div>
         </div>
@@ -152,7 +152,7 @@ const CTEFAssam = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="bg-white p-8 rounded-xl shadow-md border-l-4 border-amber-500">
               <p className="text-gray-600 italic leading-relaxed text-lg">
-                "To develop a global network of teachers committed to excellence in education and to provide a platform for sharing innovative ideas and practices. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                "To create a vibrant global community of educators dedicated to educational excellence, providing a collaborative platform for the exchange of innovative practices and empowering teachers at school and higher education levels with 21st-century competencies."
               </p>
               {/* <div className="mt-6 flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
@@ -165,8 +165,8 @@ const CTEFAssam = () => {
               </div> */}
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=400&q=80" className="rounded-lg shadow-md h-40 w-full object-cover" />
-              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=400&q=80" className="rounded-lg shadow-md h-40 w-full object-cover translate-y-8" />
+              <img src="/home/home_mission_1.jpg" className="rounded-lg shadow-md h-40 w-full object-cover" />
+              <img src="/home/home_mission_2.jpg" className="rounded-lg shadow-md h-40 w-full object-cover translate-y-8" />
             </div>
           </div>
         </div>
@@ -183,7 +183,22 @@ const CTEFAssam = () => {
             <p className="text-emerald-900 mt-2">Choose the plan that suits you best</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            {/* Students */}
+            <div className="bg-white p-8 rounded-xl shadow border border-gray-100 hover:border-emerald-500 transition relative">
+              <h3 className="font-bold text-gray-500 uppercase tracking-wider text-sm">Students/Research Scholar</h3>
+              <div className="my-4">
+                <span className="text-4xl font-bold text-emerald-900">₹500</span>
+                <span className="text-gray-400 text-sm"></span>
+              </div>
+              <ul className="space-y-3 mb-8 text-sm text-gray-600">
+                <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500" /> Access to workshops</li>
+                <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500" /> Newsletter subscription</li>
+                <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500" /> ID Card</li>
+              </ul>
+              <button className="w-full border border-emerald-900 text-emerald-900 py-2 rounded hover:bg-emerald-50">Choose Plan</button>
+            </div>
+
             {/* Standard */}
             <div className="bg-white p-8 rounded-xl shadow border border-gray-100 hover:border-emerald-500 transition relative">
               <h3 className="font-bold text-gray-500 uppercase tracking-wider text-sm">Life Member CTEF</h3>
@@ -198,14 +213,12 @@ const CTEFAssam = () => {
               </ul>
               <button className="w-full border border-emerald-900 text-emerald-900 py-2 rounded hover:bg-emerald-50">Choose Plan</button>
             </div>
-
             {/* Premium */}
             <div className="bg-white p-8 rounded-xl shadow-xl border-2 border-amber-400 relative transform md:-translate-y-4">
               <div className="absolute top-0 right-0 bg-amber-400 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">POPULAR</div>
-              <h3 className="font-bold text-amber-500 uppercase tracking-wider text-sm">Donor Membership </h3>
+              <h3 className="font-bold text-amber-500 uppercase tracking-wider text-sm">Institutional Membership</h3>
               <div className="my-4">
-                <span className="text-4xl font-bold text-emerald-900">₹25000</span>
-                <span className="text-gray-400 text-sm">above</span>
+                <span className="text-4xl font-bold text-emerald-900">₹2500</span>              
               </div>
               <ul className="space-y-3 mb-8 text-sm text-gray-600">
                 <li className="flex gap-2"><CheckCircle2 size={16} className="text-amber-500" /> All Individual benefits</li>
@@ -218,10 +231,10 @@ const CTEFAssam = () => {
 
             {/* Institution */}
             <div className="bg-white p-8 rounded-xl shadow border border-gray-100 hover:border-emerald-500 transition">
-              <h3 className="font-bold text-gray-500 uppercase tracking-wider text-sm">Institutional Membership</h3>
+              <h3 className="font-bold text-gray-500 uppercase tracking-wider text-sm">Donor Membership</h3>
               <div className="my-4">
-                <span className="text-4xl font-bold text-emerald-900">₹2500</span>
-                <span className="text-gray-400 text-sm"></span>
+                <span className="text-4xl font-bold text-emerald-900">₹25000</span>
+                  <span className="text-gray-400 text-sm">above</span>
               </div>
               <ul className="space-y-3 mb-8 text-sm text-gray-600">
                 <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500" /> up to 10 members</li>

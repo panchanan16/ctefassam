@@ -67,16 +67,16 @@ const ExecutiveCommittee = () => {
                 {/* Address */}
                 <div className="flex gap-2 mt-3">
                   <MapPin size={14} className="text-emerald-600 shrink-0 mt-0.5" />
-                  <p className="text-gray-500 text-xs leading-relaxed">{member.address}</p>
+                  <p className="text-gray-700 text-xs leading-relaxed">{member.address}</p>
                 </div>
 
                 {/* Contact Info Footer */}
                 <div className="mt-4 pt-4 border-t border-gray-50 flex flex-wrap gap-y-2 gap-x-4">
-                  <div className="flex items-center gap-1.5 text-gray-400">
+                  <div className="flex items-center gap-1.5 text-gray-600">
                     <Phone size={12} className="text-amber-500" />
                     <span className="text-[11px] font-medium">{member.contact}</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-gray-400">
+                  <div className="flex items-center gap-1.5 text-gray-600">
                     <Mail size={12} className="text-amber-500" />
                     <span className="text-[11px] font-medium truncate max-w-[150px]">
                       {member.email}

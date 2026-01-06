@@ -97,11 +97,11 @@ const Footer = () => {
                 Department of Education, Gauhati University, Guwahati-14
               </li>
               <li className="flex gap-3 items-center">
-                <Phone size={18} className="text-amber-500" /> +91 98765 43210
+                <Phone size={18} className="text-amber-500" /> +91 98640 66549
               </li>
               <li className="flex gap-3 items-center">
                 <Mail size={18} className="text-amber-500" />{" "}
-                support@ctefassam.org
+                ctefassam@gmail.com
               </li>
             </ul>
           </div>

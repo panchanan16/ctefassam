@@ -25,10 +25,9 @@ function ExecutiveCommitee() {
       name: "Tribeni Saikia",
       photo: "/executive/tribeni.jpeg",
       designation: "SECRETARY",
-      ph: "+91 9101276508",  
+      ph: "+91 9101276508",
       email: "saikia.tribeni76@gmail.com",
-      location:
-        "Nagaon, Assam",
+      location: "Nagaon, Assam",
     },
     {
       name: "Dr. Satyabrata Baruah",
@@ -88,20 +87,25 @@ function ExecutiveCommitee() {
                 <p className="text-amber-500 font-bold text-xs uppercase mb-4">
                   {item.designation}
                 </p>
-                <div className="flex flex-col justify-center space-x-2 text-gray-400 text-xs">
+                <div className="flex flex-col justify-end items-start gap-2 text-gray-800 text-xs">
+                  {/* Email */}
                   <div className="flex items-center gap-1">
-                    <Mail size={12} />
-                    {item.email}
+                    <Mail size={12} className="shrink-0" />
+                    <span className="truncate">{item.email}</span>
                   </div>
+
+                  {/* Phone */}
                   <div className="flex items-center gap-1">
-                    <Phone size={12} />
-                    {item.ph}
+                    <Phone size={12} className="shrink-0" />
+                    <span>{item.ph}</span>
                   </div>
-                </div>
-                <hr className="my-4 border-gray-100" />
-                <div className="flex gap-2 text-xs text-left text-gray-500 px-4">
-                  <MapPin />
-                  {item.location}
+
+                  {/* Location - Removed px-4 to align with above items */}
+                  <div className="flex items-start gap-1 text-left">
+                    {/* Added shrink-0 and mt-[2px] for alignment with text line */}
+                    <MapPin size={12} className="shrink-0 mt-[2px]" />
+                    <p>{item.location}</p>
+                  </div>
                 </div>
               </div>
             </div>
