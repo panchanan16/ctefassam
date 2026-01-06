@@ -45,7 +45,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-emerald-100/70">
               <li>
                 <a
-                  href="#"
+                  href="/"
                   className="hover:text-white hover:translate-x-1 transition-transform inline-block"
                 >
                   Home
@@ -53,31 +53,31 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/about_us"
                   className="hover:text-white hover:translate-x-1 transition-transform inline-block"
                 >
                   About Us
                 </a>
-              </li>
-              <li>
+              </li>  
+               <li>
                 <a
-                  href="#"
+                  href="/news_letters"
                   className="hover:text-white hover:translate-x-1 transition-transform inline-block"
                 >
-                  Executive Committee
+                  News Letters
                 </a>
-              </li>
+              </li> 
               <li>
                 <a
-                  href="#"
+                  href="/conference"
                   className="hover:text-white hover:translate-x-1 transition-transform inline-block"
                 >
-                  Membership
+                  Events
                 </a>
-              </li>
+              </li>              
               <li>
                 <a
-                  href="#"
+                  href="/gallery"
                   className="hover:text-white hover:translate-x-1 transition-transform inline-block"
                 >
                   Gallery

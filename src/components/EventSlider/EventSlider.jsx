@@ -12,7 +12,7 @@ function EventSlider() {
     {
       id: 1,
       image:
-        "https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "/events/event_slider_1.jpeg",
       title: "Digital Transformation in Education",
       date: "Oct 15, 2025",
       tag: "Featured",
@@ -20,7 +20,7 @@ function EventSlider() {
     {
       id: 2,
       image:
-        "https://images.unsplash.com/photo-1515168816992-d2272829ecb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "/events/event_slider_2.jpeg",
       title: "Global Teacher's Summit 2025",
       date: "Nov 22, 2025",
       tag: "International",
@@ -28,7 +28,15 @@ function EventSlider() {
     {
       id: 3,
       image:
-        "https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "/events/event_slider_3.jpeg",
+      title: "AI Tools for Modern Classrooms",
+      date: "Dec 05, 2025",
+      tag: "Workshop",
+    },
+     {
+      id: 4,
+      image:
+        "/events/event_slider_4.jpeg",
       title: "AI Tools for Modern Classrooms",
       date: "Dec 05, 2025",
       tag: "Workshop",
@@ -69,7 +77,7 @@ function EventSlider() {
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/90 via-emerald-900/40 to-transparent"></div>
 
               {/* Content */}
-              <div className="absolute bottom-0 left-0 p-6 md:p-10 w-full md:w-2/3">
+              {/* <div className="absolute bottom-0 left-0 p-6 md:p-10 w-full md:w-2/3">
                 <h2 className="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">
                   {slide.title}
                 </h2>
@@ -79,7 +87,7 @@ function EventSlider() {
                     {slide.date}
                   </span>
                 </div>
-              </div>
+              </div> */}
             </div>
           ))}
 
