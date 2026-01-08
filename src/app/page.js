@@ -45,7 +45,7 @@ const CTEFAssam = () => {
               <span className="text-amber-500 text-2xl">✦</span>
             </div>
             <h1 className="text-4xl lg:text-6xl font-extrabold text-emerald-950 mb-4 leading-tight">
-              Advancing Teacher Education as<br />
+              Advancing School, Higher and Teacher Education as<br />
               <span className="text-amber-500">Envisioned</span> <br />
               <span>in NEP 2020</span>
             </h1>
@@ -214,6 +214,7 @@ const CTEFAssam = () => {
               </ul>
               <button className="w-full border border-emerald-900 text-emerald-900 py-2 rounded hover:bg-emerald-50">Choose Plan</button>
             </div>
+            
             {/* Premium */}
             <div className="bg-white p-8 rounded-xl shadow-xl border-2 border-amber-400 relative transform md:-translate-y-4">
               <div className="absolute top-0 right-0 bg-amber-400 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">POPULAR</div>

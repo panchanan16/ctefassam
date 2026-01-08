@@ -22,7 +22,7 @@ function ExecutiveCommitee() {
       location: '"Niramoyee", Shanti-Path, PO-Borbheta, Jorhat-785001, Assam',
     },
     {
-      name: "Tribeni Saikia",
+      name: "Dr. Tribeni Saikia",
       photo: "/executive/tribeni.jpeg",
       designation: "Assistant Secretary General",
       ph: "+91 9101276508",
