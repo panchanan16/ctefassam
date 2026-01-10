@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "CETF Assam",
+  title: "CTEF Assam",
   description: "Advancing School, Higher and Teacher Education asEnvisioned in NEP 2020",
 };
 
