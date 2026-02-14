@@ -1,7 +1,12 @@
 import Header from '@/components/common/Header';
 import GalleryPage from '@/components/galleryPage/GalleryPage';
+import axios from 'axios';
 
-const Gallery = () => {
+export const dynamic = 'force-dynamic';
+
+const Gallery = async () => {
+  const galleryImages = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/gallery`)
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <Header />
@@ -17,8 +22,8 @@ const Gallery = () => {
           </p>
         </div>
       </header>
-      <GalleryPage />
-      
+      <GalleryPage galleryData={galleryImages ? galleryImages?.data?.data : []} />
+
     </div>
   );
 };

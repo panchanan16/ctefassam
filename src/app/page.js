@@ -9,8 +9,13 @@ import JoinForm from '@/components/JoinForm/JoinForm';
 import HomeSlider from '@/components/HomeSlider/HomeSlider';
 import ExecutiveCommitee from '@/components/ExecutiveCommitee/ExecutiveCommitee';
 import Link from 'next/link';
+import axios from 'axios';
 
-const CTEFAssam = () => {
+export const dynamic = 'force-dynamic';
+
+const CTEFAssam = async () => {
+  const galleryImages = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/gallery?limit=8`)
+
   return (
     <div className="font-sans text-slate-800 bg-white overflow-x-hidden">
 
@@ -174,7 +179,7 @@ const CTEFAssam = () => {
       </section>
 
       {/* ================= GALLERY ================= */}
-      <GalleryHome />
+      <GalleryHome galleryData={galleryImages ? galleryImages?.data?.data : []} />
 
       {/* ================= MEMBERSHIP ================= */}
       <section className="py-20 bg-slate-50">

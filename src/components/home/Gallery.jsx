@@ -4,64 +4,62 @@ import { Sparkles, X } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
 
-const GalleryHome = () => {
+const GalleryHome = ({ galleryData }) => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const galleryItems = [
     {
       id: 1,
-      title: "An Interactive Programmme On NEP-2020 Effective Implementation and Challenges To Overcome in School Education",
-      image:
-        "/gallery/gallery1.jpg",
+      title:
+        "An Interactive Programmme On NEP-2020 Effective Implementation and Challenges To Overcome in School Education",
+      image: "/gallery/gallery1.jpg",
       date: "April 04, 2022",
     },
     {
       id: 2,
       title: "Happy Hours of Effective Learning By School Children at Darrang",
-      image:
-        "/gallery/album12.jpg",
+      image: "/gallery/album12.jpg",
       date: "April 06, 2020",
     },
     {
       id: 3,
       title: "13th day happy schooling programme in 3 Tea gardens at Jorhat",
-      image:
-        "/gallery/album17.jpg",
+      image: "/gallery/album17.jpg",
       date: "June 08, 2020",
     },
     {
       id: 4,
-      title: "Press Conference For The 34th CTEF Annual International E Conference",
-      image:
-        "/gallery/album27.jpg",
+      title:
+        "Press Conference For The 34th CTEF Annual International E Conference",
+      image: "/gallery/album27.jpg",
       date: "19th and 20th December 2020",
     },
     {
       id: 5,
-      title: "Jorhat District Activity organised in collaboration with Chinamara Higher Secondary School, Jorhat",
-      image:
-        "/gallery/album62.jpg",
+      title:
+        "Jorhat District Activity organised in collaboration with Chinamara Higher Secondary School, Jorhat",
+      image: "/gallery/album62.jpg",
       date: "Feb 17, 2022",
     },
     {
       id: 6,
-      title: "CTEF Jorhat District Chapter in collaboration with Gorumora High school, Jorhat organised an awareness program for teachers on Project Based Learning",
-      image:
-        "/gallery/album64.jpg",
+      title:
+        "CTEF Jorhat District Chapter in collaboration with Gorumora High school, Jorhat organised an awareness program for teachers on Project Based Learning",
+      image: "/gallery/album64.jpg",
       date: "Feb 23, 2022",
     },
     {
       id: 7,
-      title: "Workshop on Taxonomy of Educational objectives organised by CTEF Assam ,Kamrup (R) at Ulubari H.S school",
-      image:
-        "/gallery/album73.jpg",
+      title:
+        "Workshop on Taxonomy of Educational objectives organised by CTEF Assam ,Kamrup (R) at Ulubari H.S school",
+      image: "/gallery/album73.jpg",
       date: "April 29, 2022",
     },
     {
       id: 8,
-      title: "Workshop on Guidance and Counselling of Teachers organised by Malowali High School, Jorhat held on 24-09-2022",
-      image:
-        "/gallery/album79.jpg",
+      title:
+        "Workshop on Guidance and Counselling of Teachers organised by Malowali High School, Jorhat held on 24-09-2022",
+      image: "/gallery/album79.jpg",
       date: "Sep 24, 2022",
     },
   ];
@@ -100,27 +98,31 @@ const GalleryHome = () => {
             </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {galleryItems.map((item) => (
+            {galleryData.length > 0 && galleryData?.map((item) => (
               <div
                 key={item.id}
                 className="group relative overflow-hidden rounded-lg aspect-video shadow-md cursor-pointer"
                 onClick={() => setSelectedImage(item)}
               >
                 <img
-                  src={item.image}
+                  src={`${process.env.NEXT_PUBLIC_API_URL}${item.photo}`}
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                  onError={(e) =>
-                    (e.target.src =
-                      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=400&q=80")
-                  }
+                  // onError={(e) =>
+                  //   (e.target.src =
+                  //     "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=400&q=80")
+                  // }
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition flex flex-col items-center justify-end pb-4 px-3">
                   <h3 className="text-white text-sm font-bold text-center mb-1">
                     {item.title}
                   </h3>
                   <p className="text-amber-400 text-xs font-medium mb-2">
-                    {item.date}
+                    {new Date(item.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
                   </p>
                   <span className="text-white text-xs uppercase font-bold tracking-widest border border-white px-3 py-1">
                     View
@@ -157,7 +159,7 @@ const GalleryHome = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={selectedImage.image}
+              src={`${process.env.NEXT_PUBLIC_API_URL}${selectedImage.photo}`}
               alt={selectedImage.title}
               className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
             />
@@ -166,7 +168,11 @@ const GalleryHome = () => {
                 {selectedImage.title}
               </h3>
               <p className="text-amber-500 font-semibold">
-                {selectedImage.date}
+                {new Date(selectedImage.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
               </p>
             </div>
           </div>

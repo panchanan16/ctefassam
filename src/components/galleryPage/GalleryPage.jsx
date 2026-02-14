@@ -3,7 +3,7 @@
 import { X, ChevronLeft, ChevronRight, Calendar, Loader } from "lucide-react";
 import { useEffect, useState } from "react";
 
-function GalleryPage() {
+function GalleryPage({ galleryData }) {
   // Color theme
   const colors = {
     primary: "#31694E",
@@ -18,68 +18,66 @@ function GalleryPage() {
 
   // Gallery images data
 
-    const galleryImages = [
+  const galleryImages = [
     {
       id: 1,
-      title: "An Interactive Programmme On NEP-2020 Effective Implementation and Challenges To Overcome in School Education",
-      image:
-        "/gallery/gallery1.jpg",
+      title:
+        "An Interactive Programmme On NEP-2020 Effective Implementation and Challenges To Overcome in School Education",
+      image: "/gallery/gallery1.jpg",
       date: "April 04, 2022",
     },
     {
       id: 2,
       title: "Happy Hours of Effective Learning By School Children at Darrang",
-      image:
-        "/gallery/album12.jpg",
+      image: "/gallery/album12.jpg",
       date: "April 06, 2020",
     },
     {
       id: 3,
       title: "13th day happy schooling programme in 3 Tea gardens at Jorhat",
-      image:
-        "/gallery/album17.jpg",
+      image: "/gallery/album17.jpg",
       date: "June 08, 2020",
     },
     {
       id: 4,
-      title: "Press Conference For The 34th CTEF Annual International E Conference",
-      image:
-        "/gallery/album27.jpg",
+      title:
+        "Press Conference For The 34th CTEF Annual International E Conference",
+      image: "/gallery/album27.jpg",
       date: "19th and 20th December 2020",
     },
     {
       id: 5,
-      title: "Jorhat District Activity organised in collaboration with Chinamara Higher Secondary School, Jorhat",
-      image:
-        "/gallery/album62.jpg",
+      title:
+        "Jorhat District Activity organised in collaboration with Chinamara Higher Secondary School, Jorhat",
+      image: "/gallery/album62.jpg",
       date: "Feb 17, 2022",
     },
     {
       id: 6,
-      title: "CTEF Jorhat District Chapter in collaboration with Gorumora High school, Jorhat organised an awareness program for teachers on Project Based Learning",
-      image:
-        "/gallery/album64.jpg",
+      title:
+        "CTEF Jorhat District Chapter in collaboration with Gorumora High school, Jorhat organised an awareness program for teachers on Project Based Learning",
+      image: "/gallery/album64.jpg",
       date: "Feb 23, 2022",
     },
     {
       id: 7,
-      title: "Workshop on Taxonomy of Educational objectives organised by CTEF Assam ,Kamrup (R) at Ulubari H.S school",
-      image:
-        "/gallery/album73.jpg",
+      title:
+        "Workshop on Taxonomy of Educational objectives organised by CTEF Assam ,Kamrup (R) at Ulubari H.S school",
+      image: "/gallery/album73.jpg",
       date: "April 29, 2022",
     },
     {
       id: 8,
-      title: "Workshop on Guidance and Counselling of Teachers organised by Malowali High School, Jorhat held on 24-09-2022",
-      image:
-        "/gallery/album79.jpg",
+      title:
+        "Workshop on Guidance and Counselling of Teachers organised by Malowali High School, Jorhat held on 24-09-2022",
+      image: "/gallery/album79.jpg",
       date: "Sep 24, 2022",
     },
   ];
 
   const openLightbox = (index) => {
     setCurrentIndex(index);
-    setSelectedImage(galleryImages[index]);
+    setSelectedImage(galleryData[index]);
   };
 
   const closeLightbox = () => {
@@ -87,22 +85,22 @@ function GalleryPage() {
   };
 
   const goToNext = () => {
-    const nextIndex = (currentIndex + 1) % galleryImages.length;
+    const nextIndex = (currentIndex + 1) % galleryData.length;
     setCurrentIndex(nextIndex);
-    setSelectedImage(galleryImages[nextIndex]);
+    setSelectedImage(galleryData[nextIndex]);
   };
 
   const goToPrevious = () => {
     const prevIndex =
-      (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+      (currentIndex - 1 + galleryData.length) % galleryData.length;
     setCurrentIndex(prevIndex);
-    setSelectedImage(galleryImages[prevIndex]);
+    setSelectedImage(galleryData[prevIndex]);
   };
 
   const handleLoadMore = () => {
     setIsLoading(true);
     setTimeout(() => {
-      setVisibleImages((prev) => Math.min(prev + 6, galleryImages.length));
+      setVisibleImages((prev) => Math.min(prev + 6, galleryData.length));
       setIsLoading(false);
     }, 600);
   };
@@ -137,7 +135,7 @@ function GalleryPage() {
       {/* Gallery Grid */}
       <section className="pb-16 mt-10 md:pb-24 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {galleryImages.slice(0, visibleImages).map((image, index) => (
+          {galleryData.length > 0 && galleryData.slice(0, visibleImages).map((image, index) => (
             <div
               key={image.id}
               className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:-translate-y-2"
@@ -148,7 +146,7 @@ function GalleryPage() {
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
-                  src={image.image}
+                  src={`${process.env.NEXT_PUBLIC_API_URL}${image.photo}`}
                   alt={image.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
@@ -178,7 +176,7 @@ function GalleryPage() {
         </div>
 
         {/* View More Button */}
-        {visibleImages < galleryImages.length && (
+        {visibleImages < galleryData.length && (
           <div className="text-center mt-12">
             <button
               onClick={handleLoadMore}
@@ -195,7 +193,7 @@ function GalleryPage() {
               )}
             </button>
             <p className="text-gray-600 mt-4 text-sm">
-              Showing {visibleImages} of {galleryImages.length} images
+              Showing {visibleImages} of {galleryData.length} images
             </p>
           </div>
         )}
@@ -249,9 +247,9 @@ function GalleryPage() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={selectedImage.image}
+              src={`${process.env.NEXT_PUBLIC_API_URL}${selectedImage.photo}`}
               alt={selectedImage.title}
-              className="max-w-full max-h-[calc(90vh-120px)] w-auto h-auto mx-auto object-contain rounded-lg shadow-2xl"
+              className="w-full h-auto md:h-[70vh] max-h-[80vh] object-contain rounded-lg"
             />
 
             {/* Image Info */}
@@ -271,7 +269,7 @@ function GalleryPage() {
                 </span>
               </div>
               <p className="text-sm mt-2 opacity-90">
-                Image {currentIndex + 1} of {galleryImages.length}
+                Image {currentIndex + 1} of {galleryData.length}
               </p>
             </div>
           </div>
