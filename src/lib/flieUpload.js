@@ -5,14 +5,19 @@ export async function saveFile(file, storePath) {
   const bytes = await file.arrayBuffer();
   const buffer = Buffer.from(bytes);
 
-  const uploadDir = path.join(process.cwd(), `public/${storePath}`);
-  
-  // Ensure directory exists
+  // 1. SYSTEM DISK PATH (Where the file is actually saved)
+  const basePath = process.env.FILE_UPLOAD_PATH || process.cwd();
+  const uploadDir = path.join(basePath, `public/${storePath}`);
+
   await mkdir(uploadDir, { recursive: true });
 
   const uniqueName = `${Date.now()}-${file.name.replace(/\s+/g, '-')}`;
   const filePath = path.join(uploadDir, uniqueName);
 
   await writeFile(filePath, buffer);
-  return `/${storePath}/${uniqueName}`; 
+
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://ctefassam.com';
+
+  // Returns: https://yourdomain.com/storePath/12345-file.png
+  return `${baseUrl}/${storePath}/${uniqueName}`;
 }
