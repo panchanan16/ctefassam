@@ -18,6 +18,5 @@ export async function saveFile(file, storePath) {
 
   const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://ctefassam.com';
 
-  // Returns: https://yourdomain.com/storePath/12345-file.png
-  return `${baseUrl}/${storePath}/${uniqueName}`;
+  return `${baseUrl}/${process.env.URL_PREFIX || ''}${storePath}/${uniqueName}`;
 }
