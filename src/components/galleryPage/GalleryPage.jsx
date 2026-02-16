@@ -146,7 +146,7 @@ function GalleryPage({ galleryData }) {
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
-                  src={`${process.env.NEXT_PUBLIC_API_URL}${image.photo}`}
+                  src={`${image.photo}`}
                   alt={image.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
@@ -247,7 +247,7 @@ function GalleryPage({ galleryData }) {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={`${process.env.NEXT_PUBLIC_API_URL}${selectedImage.photo}`}
+              src={`${selectedImage.photo}`}
               alt={selectedImage.title}
               className="w-full h-auto md:h-[70vh] max-h-[80vh] object-contain rounded-lg"
             />

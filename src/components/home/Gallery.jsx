@@ -105,7 +105,7 @@ const GalleryHome = ({ galleryData }) => {
                 onClick={() => setSelectedImage(item)}
               >
                 <img
-                  src={`${process.env.NEXT_PUBLIC_API_URL}${item.photo}`}
+                  src={`${item.photo}`}
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
                   // onError={(e) =>
@@ -159,7 +159,7 @@ const GalleryHome = ({ galleryData }) => {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={`${process.env.NEXT_PUBLIC_API_URL}${selectedImage.photo}`}
+              src={`${selectedImage.photo}`}
               alt={selectedImage.title}
               className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
             />

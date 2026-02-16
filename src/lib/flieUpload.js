@@ -7,8 +7,8 @@ export async function saveFile(file, storePath) {
 
   // 1. SYSTEM DISK PATH (Where the file is actually saved)
   const basePath = process.env.FILE_UPLOAD_PATH || process.cwd();
-  const uploadDir = path.join(basePath, `${process.env.NODE_ENV === "dev" ? 'public/' : ''}${storePath}`);
-
+  const uploadDir = path.join(basePath, `${process.env.NODE_FILE_PATH == "dev" ? 'public/' : ''}${storePath}`);
+  
   await mkdir(uploadDir, { recursive: true });
 
   const uniqueName = `${Date.now()}-${file.name.replace(/\s+/g, '-')}`;
