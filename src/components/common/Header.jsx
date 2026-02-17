@@ -39,7 +39,7 @@ function Header() {
             </p>
           </div>
         </div>
-
+         {/* Artuicle done */}
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center space-x-8 font-medium text-sm text-gray-600">
           <Link
@@ -52,7 +52,7 @@ function Header() {
           >
             Home
           </Link>
-
+           
           <Link
             href="/about_us"
             className={`pb-1 transition-all ${
