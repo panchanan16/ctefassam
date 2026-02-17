@@ -35,7 +35,7 @@ function Header() {
               CTEF <span className="text-amber-500">ASSAM</span>
             </h1>
             <p className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">
-              Council for Teacher Education
+              Council for Teacher Education Foundation
             </p>
           </div>
         </div>

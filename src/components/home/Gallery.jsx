@@ -107,7 +107,7 @@ const GalleryHome = ({ galleryData }) => {
                 <img
                   src={`${item.photo}`}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                  className="w-full h-full object-contain group-hover:scale-110 transition duration-500"
                   // onError={(e) =>
                   //   (e.target.src =
                   //     "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=400&q=80")

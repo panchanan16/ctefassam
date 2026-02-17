@@ -148,7 +148,7 @@ function GalleryPage({ galleryData }) {
                 <img
                   src={`${image.photo}`}
                   alt={image.title}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500"
                 />
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
