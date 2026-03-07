@@ -1,5 +1,6 @@
 "use client";
 import { Phone, MapPin, Mail, Facebook, Twitter, Linkedin } from "lucide-react";
+import FooterCredit from "./FooterCredit";
 
 const Footer = () => {
   return (
